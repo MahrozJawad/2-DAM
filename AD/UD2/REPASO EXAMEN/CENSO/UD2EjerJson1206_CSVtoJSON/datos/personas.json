@@ -1,0 +1,42 @@
+[
+  {
+    "dni": "21444555",
+    "nombre": "Juan López",
+    "domicilio": {
+      "calle": "Capitán Segarra",
+      "numero": 43,
+      "cpostal": 3004,
+      "poblacion": ""
+    }
+  },
+  {
+    "dni": "21555666",
+    "nombre": "Sergio Martínez",
+    "domicilio": {
+      "calle": "Vasco de Gama",
+      "numero": 2,
+      "cpostal": 3009,
+      "poblacion": ""
+    }
+  },
+  {
+    "dni": "21666777",
+    "nombre": "Ana Pérez",
+    "domicilio": {
+      "calle": "Enrique Pire Solís",
+      "numero": 8,
+      "cpostal": 3130,
+      "poblacion": ""
+    }
+  },
+  {
+    "dni": "21777888",
+    "nombre": "Carlos Sánchez",
+    "domicilio": {
+      "calle": "Pedro Moreno Sastre",
+      "numero": 19,
+      "cpostal": 3205,
+      "poblacion": ""
+    }
+  }
+]

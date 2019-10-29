@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<frutas>
+    <contenedor>
+        <id>3</id>
+        <producto>Naranjas</producto>
+        <pais>FR</pais>
+        <ciudad>Paris 10</ciudad>
+    </contenedor>
+    <contenedor>
+        <id>12</id>
+        <producto>Naranjas</producto>
+        <pais>FR</pais>
+        <ciudad>Lyon</ciudad>
+    </contenedor>
+    <contenedor>
+        <id>14</id>
+        <producto>Naranjas</producto>
+        <pais>FR</pais>
+        <ciudad>Dieppe</ciudad>
+    </contenedor>
+    <contenedor>
+        <id>16</id>
+        <producto>Naranjas</producto>
+        <pais>FR</pais>
+        <ciudad>Lescar</ciudad>
+    </contenedor>
+    <contenedor>
+        <id>17</id>
+        <producto>Naranjas</producto>
+        <pais>DE</pais>
+        <ciudad>Kiel</ciudad>
+    </contenedor>
+    <contenedor>
+        <id>29</id>
+        <producto>Naranjas</producto>
+        <pais>FR</pais>
+        <ciudad>La Gacilly</ciudad>
+    </contenedor>
+    <contenedor>
+        <id>48</id>
+        <producto>Naranjas</producto>
+        <pais>FR</pais>
+        <ciudad>Angoulême</ciudad>
+    </contenedor>
+</frutas>

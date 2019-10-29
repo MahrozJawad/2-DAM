@@ -1,0 +1,11 @@
+
+[
+    {
+        "Id": 1,
+        "Nombre": "Windows"
+    },
+    {
+        "Id": 2,
+        "Nombre": "Linux"
+    }
+]

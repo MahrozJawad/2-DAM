@@ -1,0 +1,22 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "Luis Pérez",
+        "localidad": "Alicante",
+        "notas": [
+            "3,40",
+            "6,20",
+            "6,80"
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Ana García",
+        "localidad": "Elche",
+        "notas": [
+            "4,30",
+            "7,50"
+        ]
+    }
+]

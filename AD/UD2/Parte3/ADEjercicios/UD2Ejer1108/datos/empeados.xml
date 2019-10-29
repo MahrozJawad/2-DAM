@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ListaPersonas>
+    <DatosPersona>
+        <nombre>nombre</nombre>
+        <email>email</email>
+        <edad>edad</edad>
+    </DatosPersona>
+    <DatosPersona>
+        <nombre>persona1</nombre>
+        <email>persona1@p.com</email>
+        <edad>19</edad>
+    </DatosPersona>
+    <DatosPersona>
+        <apellido>apellido2</apellido>
+        <nombre> nombre2</nombre>
+        <email>persona2@p.com</email>
+        <edad>21</edad>
+    </DatosPersona>
+</ListaPersonas>

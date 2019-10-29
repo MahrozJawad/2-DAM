@@ -1,0 +1,16 @@
+<AnchorPane id="AnchorPane" prefHeight="307.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" > 
+  <children>
+    <TableView fx:id="tablaProcesos" layoutX="10.0" layoutY="87.0" prefHeight="134.0" prefWidth="300.0">
+      <columns>
+        <TableColumn fx:id="colProceso" prefWidth="150.0" text="Proceso" />
+        <TableColumn fx:id="colEstado"  prefWidth="150.0" resizable="false" text="Estado" />
+      </columns>
+    </TableView>
+    <TableView fx:id="tablaAlumnos" layoutX="10.0" layoutY="87.0" prefHeight="134.0" prefWidth="300.0">
+      <columns>
+         <TableColumn fx:id="colDNI"     prefWidth="150.0" text="Proceso" />
+         <TableColumn fx:id="colNombre"  prefWidth="150.0" resizable="false" text="Estado" />
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<barrios>
+    <barrio nombre="Bronx">
+        <restaurante codigo="1">
+            <nombre>Morris Park Bake Shop</nombre>
+            <domicilio>
+                <calle>Morris Park Ave</calle>
+                <codigo_postal>10462</codigo_postal>
+            </domicilio>
+            <categoria>B</categoria>
+            <puntuacion>14.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="11">
+            <nombre>Wild Asia</nombre>
+            <domicilio>
+                <calle>Southern Boulevard</calle>
+                <codigo_postal>10460</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>11.0</puntuacion>
+        </restaurante>
+    </barrio>
+    <barrio nombre="Brooklyn">
+        <restaurante codigo="2">
+            <nombre>Wendy'S</nombre>
+            <domicilio>
+                <calle>Flatbush Avenue</calle>
+                <codigo_postal>11225</codigo_postal>
+            </domicilio>
+            <categoria>B</categoria>
+            <puntuacion>23.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="4">
+            <nombre>Riviera Caterer</nombre>
+            <domicilio>
+                <calle>Stillwell Avenue</calle>
+                <codigo_postal>11224</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>12.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="8">
+            <nombre>Wilken'S Fine Food</nombre>
+            <domicilio>
+                <calle>Avenue U</calle>
+                <codigo_postal>11234</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>13.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="9">
+            <nombre>Regina Caterers</nombre>
+            <domicilio>
+                <calle>11 Avenue</calle>
+                <codigo_postal>11219</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>12.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="10">
+            <nombre>Taste The Tropics Ice Cream</nombre>
+            <domicilio>
+                <calle>Nostrand Avenue</calle>
+                <codigo_postal>11226</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>12.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="12">
+            <nombre>C &amp; C Catering Service</nombre>
+            <domicilio>
+                <calle>18 Avenue</calle>
+                <codigo_postal>11214</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>5.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="13">
+            <nombre>May May Kitchen</nombre>
+            <domicilio>
+                <calle>Sutter Avenue</calle>
+                <codigo_postal>11208</codigo_postal>
+            </domicilio>
+            <categoria>C</categoria>
+            <puntuacion>56.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="15">
+            <nombre>Seuda Foods</nombre>
+            <domicilio>
+                <calle>Kings Highway</calle>
+                <codigo_postal>11223</codigo_postal>
+            </domicilio>
+            <categoria>B</categoria>
+            <puntuacion>19.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="16">
+            <nombre>Carvel Ice Cream</nombre>
+            <domicilio>
+                <calle>Church Avenue</calle>
+                <codigo_postal>11218</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>13.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="18">
+            <nombre>Nordic Delicacies</nombre>
+            <domicilio>
+                <calle>3 Avenue</calle>
+                <codigo_postal>11209</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>10.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="20">
+            <nombre>The Movable Feast</nombre>
+            <domicilio>
+                <calle>Prospect Park West</calle>
+                <codigo_postal>11215</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>13.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="27">
+            <nombre>White Castle</nombre>
+            <domicilio>
+                <calle>Myrtle Avenue</calle>
+                <codigo_postal>11205</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>8.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="30">
+            <nombre>Shashemene Int'L Restaura</nombre>
+            <domicilio>
+                <calle>East 56 calle</calle>
+                <codigo_postal>11203</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>12.0</puntuacion>
+        </restaurante>
+    </barrio>
+    <barrio nombre="Manhattan">
+        <restaurante codigo="3">
+            <nombre>Dj Reynolds Pub And Restaurant</nombre>
+            <domicilio>
+                <calle>West   57 calle</calle>
+                <codigo_postal>10019</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>12.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="14">
+            <nombre>1 East 66Th calle Kitchen</nombre>
+            <domicilio>
+                <calle>East   66 calle</calle>
+                <codigo_postal>10065</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>6.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="19">
+            <nombre>Glorious Food</nombre>
+            <domicilio>
+                <calle>East   74 calle</calle>
+                <codigo_postal>10021</codigo_postal>
+            </domicilio>
+            <categoria>B</categoria>
+            <puntuacion>16.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="22">
+            <nombre>Bully'S Deli</nombre>
+            <domicilio>
+                <calle>Broadway</calle>
+                <codigo_postal>10003</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>12.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="24">
+            <nombre>Harriet'S Kitchen</nombre>
+            <domicilio>
+                <calle>Amsterdam Avenue</calle>
+                <codigo_postal>10024</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>13.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="25">
+            <nombre>P &amp; S Deli Grocery</nombre>
+            <domicilio>
+                <calle>Columbus Avenue</calle>
+                <codigo_postal>10025</codigo_postal>
+            </domicilio>
+            <categoria>B</categoria>
+            <puntuacion>26.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="26">
+            <nombre>Angelika Film Center</nombre>
+            <domicilio>
+                <calle>West Houston calle</calle>
+                <codigo_postal>10012</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>13.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="29">
+            <nombre>The Country Cafe</nombre>
+            <domicilio>
+                <calle>Wall calle</calle>
+                <codigo_postal>10005</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>13.0</puntuacion>
+        </restaurante>
+    </barrio>
+    <barrio nombre="Queens">
+        <restaurante codigo="5">
+            <nombre>Tov Kosher Kitchen</nombre>
+            <domicilio>
+                <calle>63 Road</calle>
+                <codigo_postal>11374</codigo_postal>
+            </domicilio>
+            <categoria>B</categoria>
+            <puntuacion>25.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="6">
+            <nombre>Brunos On The Boulevard</nombre>
+            <domicilio>
+                <calle>Astoria Boulevard</calle>
+                <codigo_postal>11369</codigo_postal>
+            </domicilio>
+            <categoria>Z</categoria>
+            <puntuacion>38.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="17">
+            <nombre>Carvel Ice Cream</nombre>
+            <domicilio>
+                <calle>Hillside Avenue</calle>
+                <codigo_postal>11004</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>13.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="21">
+            <nombre>Sal'S Deli</nombre>
+            <domicilio>
+                <calle>20 Avenue</calle>
+                <codigo_postal>11356</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>12.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="23">
+            <nombre>Steve Chu'S Deli &amp; Grocery</nombre>
+            <domicilio>
+                <calle>10 calle</calle>
+                <codigo_postal>11106</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>12.0</puntuacion>
+        </restaurante>
+        <restaurante codigo="28">
+            <nombre>Ho Mei Restaurant</nombre>
+            <domicilio>
+                <calle>37 Avenue</calle>
+                <codigo_postal>11368</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>13.0</puntuacion>
+        </restaurante>
+    </barrio>
+    <barrio nombre="Staten Island">
+        <restaurante codigo="7">
+            <nombre>Kosher Island</nombre>
+            <domicilio>
+                <calle>Victory Boulevard</calle>
+                <codigo_postal>10314</codigo_postal>
+            </domicilio>
+            <categoria>A</categoria>
+            <puntuacion>12.0</puntuacion>
+        </restaurante>
+    </barrio>
+</barrios>

@@ -1,0 +1,33 @@
+
+{
+    "columnas": [
+        {
+            "columna": "colProceso",
+            "propiedades": {
+                "tabla": "tablaProcesos",
+                "ancho": "150.0"
+            }
+        },
+        {
+            "columna": "colEstado",
+            "propiedades": {
+                "tabla": "tablaProcesos",
+                "ancho": "150.0"
+            }
+        },
+        {
+            "columna": "colDNI",
+            "propiedades": {
+                "tabla": "tablaAlumnos",
+                "ancho": "150.0"
+            }
+        },
+        {
+            "columna": "colNombre",
+            "propiedades": {
+                "tabla": "tablaAlumnos",
+                "ancho": "150.0"
+            }
+        }
+    ]
+}

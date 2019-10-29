@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListaPersonas>
+  <DatosPersona>
+    <nombre>Ana</nombre>
+	<email>ana@ad.es</email>
+    <edad>14</edad>
+  </DatosPersona>
+  <DatosPersona>
+    <nombre>Luis Miguel</nombre>
+	<email>luis.miguel@ad.es</email>
+    <edad>15</edad>
+  </DatosPersona>
+  <DatosPersona>
+    <nombre>Alicia</nombre>
+	<email>alicia@ad.es</email>
+    <edad>13</edad>
+  </DatosPersona>
+  <DatosPersona>
+    <nombre>Pedro</nombre>
+	<email>pedro@ad.es</email>
+    <edad>15</edad>
+  </DatosPersona>
+  <DatosPersona>
+    <nombre>Manuel</nombre>
+	<email>manuel@ad.es</email>
+    <edad>16</edad>
+  </DatosPersona>
+  <DatosPersona>
+    <nombre>Andrés</nombre>
+	<email>andres@ad.es</email>
+    <edad>12</edad>
+  </DatosPersona>
+  <DatosPersona>
+    <nombre>Julio</nombre>
+	<email>julio@ad.es</email>
+    <edad>16</edad>
+  </DatosPersona>
+  <DatosPersona>
+    <nombre>Antonio</nombre>
+	<email>antonio@ad.es</email>
+    <edad>14</edad>
+  </DatosPersona>
+  <DatosPersona>
+    <nombre>María Jesús</nombre>
+	<email>maria.jesus@ad.es</email>
+    <edad>13</edad>
+  </DatosPersona>
+</ListaPersonas>

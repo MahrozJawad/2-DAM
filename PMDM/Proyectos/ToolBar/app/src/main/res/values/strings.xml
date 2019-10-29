@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ToolBar</string>
+    <string name="hello_world">Hello World</string>
+    <string name="appbar_scrolling_view_behavior">appbar_scrolling_view_behavior</string>
+</resources>
