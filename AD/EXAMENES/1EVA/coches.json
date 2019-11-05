@@ -1,0 +1,61 @@
+
+{
+    "coches": [
+        {
+            "marca": "Hyundai",
+            "modelo": "I10",
+            "caracteristicas": {
+                "motor": "electrico",
+                "precio": 12665
+            }
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "I20",
+            "caracteristicas": {
+                "motor": "diesel",
+                "precio": 16815
+            }
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "I30",
+            "caracteristicas": {
+                "motor": "gasolina",
+                "precio": 20450
+            }
+        },
+        {
+            "marca": "Renault",
+            "modelo": "Clio",
+            "caracteristicas": {
+                "motor": "gasolina",
+                "precio": 16780
+            }
+        },
+        {
+            "marca": "Renault",
+            "modelo": "Kadjar",
+            "caracteristicas": {
+                "motor": "diesel",
+                "precio": 23760
+            }
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "Polo",
+            "caracteristicas": {
+                "motor": "electrico",
+                "precio": 16088
+            }
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "Golf",
+            "caracteristicas": {
+                "motor": "gasolina",
+                "precio": 21321
+            }
+        }
+    ]
+}

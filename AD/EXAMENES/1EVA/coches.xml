@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<coches>
+	<marca id="Hyundai">
+		<modelo mod="I10">
+			<motor>electrico</motor>
+			<precio>12665</precio>
+		</modelo>
+		<modelo mod="I20">
+			<motor>diesel</motor>
+			<precio>16815</precio>
+		</modelo>
+		<modelo mod="I30">
+			<motor>gasolina</motor>
+			<precio>20450</precio>
+		</modelo>
+	</marca>
+	<marca id="Renault">
+		<modelo mod="Clio">
+			<motor>gasolina</motor>
+			<precio>16780</precio>
+		</modelo>
+		<modelo mod="Kadjar">
+			<motor>diesel</motor>
+			<precio>23760</precio>
+		</modelo>
+	</marca>
+	<marca id="Volkswagen">
+		<modelo mod="Polo">
+			<motor>electrico</motor>
+			<precio>16088</precio>
+		</modelo>
+		<modelo mod="Golf">
+			<motor>gasolina</motor>
+			<precio>21321</precio>
+		</modelo>
+	</marca>
+</coches>	
