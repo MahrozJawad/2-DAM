@@ -21,36 +21,41 @@ public class Cuenta {
         this.saldoActual = saldoActual;
     }
 
-    public synchronized double getIngreso() {
+    public double getIngreso() {
         return ingreso;
     }
 
-    public synchronized void setIngreso(double ingreso) {
-        this.ingreso = ingreso;
+    public synchronized void setIngreso(double ingreso, Persona p) throws InterruptedException {
+        
         if(valorMaximo > (saldoActual+ingreso))
-            saldoActual += this.ingreso;
+        {
+            ImprimeIngreso(p.nombre,ingreso);
+            saldoActual += ingreso;
+        }
+            
         else
         {
-            if(!isError())
-                System.out.println("Se ha superado el limite");
+            System.out.println("Se ha superado el limite");
+
             setError(true);
         }
     }
 
-    public synchronized double getReintegro() {
+    public double getReintegro() {
         return reintegro;
     }
 
-    public synchronized void setReintegro(double reintegro) {
-        this.reintegro = reintegro;
+    public synchronized void setReintegro(double reintegro, Persona p) throws InterruptedException {
+        
         if(saldoActual<0) {
-            if(!isError())
-                System.out.println("No tienes dinero suficiente.");
+            System.out.println("No tienes dinero suficiente.");
             setError(true);
         }
         else 
-            saldoActual -= this.reintegro;
-        
+        {
+            Imprimereintegro(p.nombre, reintegro);            
+            saldoActual -= reintegro;
+        }
     }
 
     public double getValorMaximo() {
@@ -67,6 +72,20 @@ public class Cuenta {
 
     public void setError(boolean error) {
         this.error = error;
+    }
+    
+    public void ImprimeIngreso(String nombre, double ingreso) {
+        if (!this.isError()) {
+            System.out.println(nombre + " ha Ingresado " + ingreso);
+            System.out.println("Saldo actual " + Math.round(this.getSaldoActual() * 100) / 100);
+        }
+    }
+    public void Imprimereintegro(String nombre, double reintegro) {
+        
+        if (!this.isError()) {
+            System.out.println(nombre + " ha Reintegrado " + reintegro);
+            System.out.println("Saldo actual " + Math.round(this.getSaldoActual() * 100) / 100);
+        }
     }
     
     
