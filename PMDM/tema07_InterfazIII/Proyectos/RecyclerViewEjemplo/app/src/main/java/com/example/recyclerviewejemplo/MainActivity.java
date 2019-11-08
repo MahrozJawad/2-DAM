@@ -31,7 +31,7 @@ Adaptador adaptador;
         adaptador.setClickBtImage(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,"Pulsado imagen", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"Pulsado imagen" , Toast.LENGTH_SHORT).show();
             }
         });
 

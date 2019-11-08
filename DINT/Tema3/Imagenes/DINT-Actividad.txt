@@ -1,0 +1,4 @@
+Key:
+b9298b46c75143b48a9fd2aa11b77168
+Extremo:
+https://actividad1.cognitiveservices.azure.com/
