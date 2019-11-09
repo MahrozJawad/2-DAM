@@ -1,8 +1,8 @@
-package ud3ejer201.bdtareas;
+package ud3ejer203.bdapps;
 
 import java.sql.*;
 
-public class UD3Ejer201BDTAREAS {
+public class UD3Ejer203BDAPPS {
 
     public static void main(String[] args) {
         try {
@@ -15,24 +15,18 @@ public class UD3Ejer201BDTAREAS {
             String password = "1234";
             Connection con = DriverManager.getConnection(url, usuario, password);
 // Crear Statement de la Consulta
-            String sentenciaSQL = "CREATE TABLE ejecuciones("
-                            + "id INT AUTO_INCREMENT PRIMARY KEY,"
-                            + "codprograma VARCHAR(50),"
-                            + "fecha DATE,"
-                            + "usuario VARCHAR(50)"
-                            + ")";
+            String sentenciaSQL = "ALTER TABLE programas ADD COLUMN ocupacion INT DEFAULT 0";
             Statement statement = con.createStatement();
-// Resulset
+            
             statement.executeUpdate(sentenciaSQL);
 // Cerrar conexión
-            statement.close();
             con.close();
         } catch (ClassNotFoundException ce) {
             ce.printStackTrace();
         } catch (SQLException se) {
             se.printStackTrace();
         }
-        System.out.println("Terminado! se ha creado la tabla ejecuciones con éxito");
+        System.out.println("Terminado! se ha Añadido una columla 'Ocupacion' en programas");
     }
 }
 
