@@ -76,6 +76,47 @@ public class HiberSeries1v1 {
         }
     }
     
+    public static void buscarSeriePorDuracion() {
+        Query consulta = sesion.createQuery("from Series");
+        List resultados = consulta.list();
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Introduce un valor minimo de duración: ");
+        int minimo = entrada.nextInt();
+        
+        System.out.print("Introduce un valor máximo de duración: ");
+        int maximo = entrada.nextInt();
+
+
+        System.out.printf("Codigo Titulo                                   Tv         Duración\n");
+        System.out.printf("------ ---------------------------------------- ---------- --------\n");
+        for (Object resultado : resultados) {
+            Series serie = (Series) resultado; // Cast
+            String titulo = serie.getTitulo();
+            int duracion = serie.getDuracion();
+            if (duracion >= minimo && duracion <= maximo) {
+                System.out.printf("%6d %-40s %-10s %8d\n",serie.getCodigo(), titulo, serie.getTv(), duracion);
+            }
+        }
+    }
+    
+    public static void mostrarSeriesPorCanal() {
+        Query consulta = sesion.createQuery("SELECT tv, COUNT(*) from Series GROUP BY tv");
+        List resultados = consulta.list();
+        Scanner entrada = new Scanner(System.in);
+        
+
+        System.out.printf("Canal TV     Total   \n");
+        System.out.printf("---------   ---------\n");
+        for (Object resultado : resultados) {
+            Series serie = (Series) resultado; // Cast
+            //String titulo = serie.getTitulo();
+            String canal = serie.getTv();
+            
+            System.out.printf("%6d %-50s \n",canal, 1);
+        }
+    }
+    
     
     // ***************************************************
     // MAIN

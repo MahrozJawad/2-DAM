@@ -1,10 +1,6 @@
 
 package packUtils;
 
-import hiberseries1v1.HiberSeries1v1;
-import static hiberseries1v1.HiberSeries1v1.addSerie;
-import static hiberseries1v1.HiberSeries1v1.verSeries;
-import static hiberseries1v1.HiberSeries1v1.verSeriestextoIntroducido;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import static packUtils.UtilString.*;
@@ -20,12 +16,11 @@ public class Menu {
         while (!salir) {
             Linea();
             System.out.print(Colores.FONDO_BLANCO);
-            System.out.println(Colores.LETRA_BLANCO + "1. Mostrar series");
-            System.out.println(Colores.LETRA_BLANCO + "2. Añadir serie");
-            System.out.println(Colores.LETRA_BLANCO + "3. buscar con el texto de titulo");
-            System.out.println(Colores.LETRA_BLANCO + UtilString.StrRepetir('-',20));
-            System.out.println(Colores.LETRA_BLANCO + "0. Salir");
-            System.out.println(Colores.LETRA_BLANCO + UtilString.StrRepetir('-',20));
+            System.out.println(Colores.LETRA_AZUL + "1. Opción 1");
+            System.out.println(Colores.LETRA_AZUL + "2. Opción 2");
+            System.out.println(Colores.LETRA_AZUL + UtilString.StrRepetir('-',20));
+            System.out.println(Colores.LETRA_AZUL + "0. Salir");
+            System.out.println(Colores.LETRA_AZUL + UtilString.StrRepetir('-',20));
 
             try {
                 
@@ -35,15 +30,12 @@ public class Menu {
                 Linea();
                 switch (opcion) {
                     case 1:
-                        verSeries();
-                        break;   
-                        
+                        System.out.println("Opción 1");
+                        break;  
                     case 2:
-                        addSerie();
-                        break; 
-                    case 3:
-                        verSeriestextoIntroducido();
-                        break; 
+                        System.out.println("Opción 2");
+                        break;  
+                        
                     // **************************
                     // SALIR
                     // **************************

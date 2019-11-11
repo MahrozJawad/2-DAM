@@ -3,6 +3,7 @@ package packUtils;
 
 import hiberseries1v1.HiberSeries1v1;
 import static hiberseries1v1.HiberSeries1v1.addSerie;
+import static hiberseries1v1.HiberSeries1v1.buscarSeriePorDuracion;
 import static hiberseries1v1.HiberSeries1v1.verSeries;
 import static hiberseries1v1.HiberSeries1v1.verSeriestextoIntroducido;
 import java.util.InputMismatchException;
@@ -22,7 +23,9 @@ public class Menu {
             System.out.print(Colores.FONDO_BLANCO);
             System.out.println(Colores.LETRA_BLANCO + "1. Mostrar series");
             System.out.println(Colores.LETRA_BLANCO + "2. Añadir serie");
-            System.out.println(Colores.LETRA_BLANCO + "3. buscar con el texto de titulo");
+            System.out.println(Colores.LETRA_BLANCO + "3. Buscar Serie por título");
+            System.out.println(Colores.LETRA_BLANCO + "4. Buscar Serie por duración");
+            System.out.println(Colores.LETRA_BLANCO + "5. Mostrar series por Canal");
             System.out.println(Colores.LETRA_BLANCO + UtilString.StrRepetir('-',20));
             System.out.println(Colores.LETRA_BLANCO + "0. Salir");
             System.out.println(Colores.LETRA_BLANCO + UtilString.StrRepetir('-',20));
@@ -44,6 +47,9 @@ public class Menu {
                     case 3:
                         verSeriestextoIntroducido();
                         break; 
+                    case 4:
+                        buscarSeriePorDuracion();
+                        break;
                     // **************************
                     // SALIR
                     // **************************
