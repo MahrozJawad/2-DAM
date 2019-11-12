@@ -1,0 +1,6 @@
+datos = new ArrayList<>();
+datos.add(new Dato("Cohete espacial","Soy un cohete espacial que viajo por el espacio interestela",BitmapFactory.decodeResource(this.getResources(), R.drawable.cohete_flat),TYPE_ITEM_1));
+datos.add(new Dato("Coordillera de noche","No hay nada como una noche plácida en la montaña, ¿verdad?",BitmapFactory.decodeResource(this.getResources(), R.drawable.material_flat),TYPE_ITEM_2));
+datos.add(new Dato("London city","No hay nada como pasear por la orilla del Támesis en una mañana con niebla",BitmapFactory.decodeResource(this.getResources(), R.drawable.london_flat),TYPE_ITEM_3));
+datos.add(new Dato("Discovery en la noche","Viajar al epacio, recorrer la vía láctea, y volver a casa con mi Discovery...",BitmapFactory.decodeResource(this.getResources(), R.drawable.moon_flat),TYPE_ITEM_3));
+        
