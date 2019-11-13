@@ -34,8 +34,4 @@ public class Camarero extends Thread{
     public void setDespierta(boolean despierta) {
         this.despierta = despierta;
     }
-    
-    
-    
-
 }

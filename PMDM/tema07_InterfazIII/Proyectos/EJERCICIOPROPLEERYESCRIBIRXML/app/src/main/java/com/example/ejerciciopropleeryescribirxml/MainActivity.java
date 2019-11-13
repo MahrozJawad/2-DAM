@@ -140,7 +140,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             else
                 Toast.makeText(this, "Debe rellenar los dos datos", Toast.LENGTH_LONG).show();
         }
-        else if()
+        else if() {
+
+        }
 
     }
 }
