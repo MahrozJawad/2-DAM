@@ -34,8 +34,7 @@
                             <span class="glyphicon glyphicon-home" aria-hidden="true">
                             </span> Volver 
                         </a>
-                            
-                            <input class="btn btn-success" type="submit" value="Agregar Encuesta"/>
+                        <input class="btn btn-success" type="submit" value="Agregar Encuesta"/>
                     </p>
                 </form:form>
                 </div>

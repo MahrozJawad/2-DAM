@@ -14,33 +14,38 @@
                 <li><a href="<c:out value="home.htm"/>">Mantenimiento de Encuestas</a></li>
                 <li class="active">Consultar respuesta</li>
             </ol>
-            
-                <div class="panel-body">
-                    <div class="row">
-                         <h1>Consultar respuesta</h1>
-                    </div>  
-                    
-                    <form:form method="get" commandName="Pregunta">
-                        <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
-                        <div class="form-group">
-                            <form:label path="idEncuesta">id</form:label>
-                            <form:input path="idEncuesta" cssClass="form-control"></form:input>
-                        </div>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><c:out value="${pregunta.id}"></c:out></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                        <div class="form-group">
-                            <form:label path="textoPregunta">Pregunta</form:label>
-                            <form:input path="textoPregunta" cssClass="form-control"></form:input>
-                        </div>
-                    </form:form>
-                </div>
-                
-                
+                    <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Pregunta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><c:out value="${pregunta.textoPregunta}"></c:out></td>
+                        </tr>
+                    </tbody>
+                </table>
+                       
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th style="width: 85%">Respuesta</th>
+                        <th style="width: 80%">Respuesta</th>
                         <th style="width: 5%">Num.</th>
-                        <th style="width: 15%">Acciones</th>
+                        <th style="width: 20%">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -70,7 +75,7 @@
                 <td></td>
                 <td>
                     <p style="text-align: center">
-                        <a href="<c:url value="add.htm"/>" class="btn btn-success">
+                        <a href="<c:url value="agregarRespuesta.htm?idEncuesta=${pregunta.id}"></c:url>" class="btn btn-success">
                             <span class="glyphicon glyphicon-plus" aria-hidden="true">
                             </span> Agregar 
                         </a>

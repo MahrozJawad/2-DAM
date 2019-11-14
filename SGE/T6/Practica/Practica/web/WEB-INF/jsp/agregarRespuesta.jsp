@@ -14,26 +14,32 @@
             
             <ol class="breadcrumb">
                 <li><a href="<c:out value="home.htm"/>">Mantenimiento de Encuestas</a></li>
-                <li><a href="<c:out value="consultar.htm"/>">Consultar respuestas</a></li>
-                <li class="active">Agregar respuesta</li>
+                <li><a href="<c:out value="home.htm"/>">Consultar respuesta</a></li>
+                <li class="active">Agregar Respuestas</li>
             </ol>
             
             <div class="panel panel-success">
-                <div class="panel-heading">Formulario para agregar encuesta</div>
+                <div class="panel-heading">Formulario para agregar respuesta</div>
                 <div class="panel-body">
-                    <h1>Agregar Encuesta</h1>
-                <form:form method="post" commandName="AgregarEncuesta">
+                    <h1>Agregar respuesta</h1>
+                    
+                    <form:form method="post" commandName="pregunta">
                     <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
+                   
                     <div class="form-group">
                         <form:label path="textoPregunta">Pregunta</form:label>
                         <form:input path="textoPregunta" cssClass="form-control"></form:input>
                         <form:errors path="textoPregunta"></form:errors>
                     </div>
-                    
+                </form:form>
+                     
+                <form:form method="post" commandName="respuesta">
+                    <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
+                   
                     <div class="form-group">
-                        <form:label path="textoPregunta">Respuesta</form:label>
-                        <form:input path="textoPregunta" cssClass="form-control"></form:input>
-                        <form:errors path="textoPregunta"></form:errors>
+                        <form:label path="textoRespuesta">Respuesta</form:label>
+                        <form:input path="textoRespuesta" cssClass="form-control"></form:input>
+                        <form:errors path="textoRespuesta"></form:errors>
                     </div>
                     
                     <p  style="text-align: center;">

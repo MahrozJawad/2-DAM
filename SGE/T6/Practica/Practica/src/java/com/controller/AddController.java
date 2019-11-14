@@ -38,7 +38,7 @@ public class AddController {
             mav.setViewName("add");
             mav.addObject("preguntas", new Preguntas());
             
-            this.jdbcTemplate.update("insert into encuesta (idEncuesta,textoPregunta) values (?,?)",
+            this.jdbcTemplate.update("insert into respuesta (idEncuesta,textoPregunta) values (?,?)",
                                      p.getId(),p.getTextoPregunta());
             return new ModelAndView("redirect:/home.htm");
         }

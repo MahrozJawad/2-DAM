@@ -44,7 +44,7 @@ public class ConsultarController {
         List respuestas = jdbcTemplate.queryForList(sql);
         
         mav.setViewName("consultar");
-        mav.addObject("Pregunta", new Preguntas(datos.getId(),datos.getTextoPregunta()));
+        mav.addObject("pregunta", new Preguntas(id,datos.getTextoPregunta()));
         mav.addObject("Respuestas", respuestas);
         return mav;
     }

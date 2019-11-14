@@ -22,19 +22,24 @@
                 <div class="panel-heading">Formulario para editar Encuestas</div>
                 <div class="panel-body">
                     <h1>Editar Respuesta</h1>
-                <form:form method="post" commandName="preguntas">
+                    
+                    <form:form method="get" commandName="preguntas">
+                    <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
+                        <div class="form-group">
+                            <form:label path="textoPregunta">Pregunta</form:label>
+                            <form:input path="textoPregunta" cssClass="form-control"></form:input>
+                        </div>
+                    </form:form>
+                    
+                <form:form method="post" commandName="respuestas">
                     <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
                     <div class="form-group">
-                        <form:label path="textoPregunta">Pregunta</form:label>
-                        <form:input path="textoPregunta" cssClass="form-control"></form:input>
+                        <form:label path="textoRespuesta">Respuesta</form:label>
+                        <form:input path="textoRespuesta" cssClass="form-control"></form:input>
                     </div>
                     <div class="form-group">
-                        <form:label path="textoPregunta">Respuesta</form:label>
-                        <form:input path="textoPregunta" cssClass="form-control"></form:input>
-                    </div>
-                    <div class="form-group">
-                        <form:label path="textoPregunta">Número</form:label>
-                        <form:input path="textoPregunta" cssClass="form-control"></form:input>
+                        <form:label path="numeroRespuestas">Número</form:label>
+                        <form:input path="numeroRespuestas" cssClass="form-control"></form:input>
                     </div>
                     
                     <p  style="text-align: center;">
@@ -43,7 +48,7 @@
                             </span> Volver 
                         </a>
                             
-                        <input class="btn btn-primary" type="submit" value="Editar Encuesta "/>
+                        <input class="btn btn-primary" type="submit" value="Editar Respuesta "/>
                 </form:form>
                 </div>
             </div>
