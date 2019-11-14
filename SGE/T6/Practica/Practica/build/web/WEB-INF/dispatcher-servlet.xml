@@ -24,6 +24,10 @@
                 <prop key="add.htm">addController</prop>
                 <prop key="edit.htm">editController</prop>
                 <prop key="delete.htm">deleteController</prop>
+                <prop key="consultar.htm">consultarController</prop>
+                <prop key="agregarRespuesta.htm">agregarRespuestaController</prop>
+                <prop key="borrarRespuesta">borrarRespuestasController</prop>
+                <prop key="editarRespuesta">editarRespuestaController</prop>
             </props>
         </property>
     </bean>
@@ -43,4 +47,8 @@
     <bean name="addController" class="com.controller.AddController"/>
     <bean name="editController" class="com.controller.EditController"/>
     <bean name="deleteController" class="com.controller.DeleteController"/>
+    <bean name="consultarController" class="com.controller.ConsultarController"/>
+    <bean name="agregarRespuestaController" class="com.controller.AgregarRespuestaController"/>
+    <bean name="borrarRespuestasController" class="com.controller.BorrarRespuestasController"/>
+    <bean name="editarRespuestaController" class="com.controller.EditarRespuestaController"/>
 </beans>

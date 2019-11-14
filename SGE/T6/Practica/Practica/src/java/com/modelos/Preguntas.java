@@ -3,11 +3,11 @@ package com.modelos;
 
 
 public class Preguntas {
-    private int id;
+    private int idEncuesta;
     private String textoPregunta;
 
     public Preguntas(int id, String textoPregunta) {
-        this.id = id;
+        this.idEncuesta = id;
         this.textoPregunta = textoPregunta;
     }
 
@@ -15,11 +15,11 @@ public class Preguntas {
     }
 
     public int getId() {
-        return id;
+        return idEncuesta;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.idEncuesta = id;
     }
 
     public String getTextoPregunta() {
