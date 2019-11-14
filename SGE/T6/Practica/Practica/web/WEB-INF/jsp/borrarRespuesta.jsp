@@ -13,28 +13,33 @@
         <div class="container">
             
             <ol class="breadcrumb">
-                <li><a href="<c:out value="/home.htm"/>">Mantenimiento de encuestas</a></li>
-                <li><a href="<c:out value="/consultar.htm"/>">Consultar respuestas</a></li>
+                <li><a href="<c:out value="home.htm"/>">Mantenimiento de encuestas</a></li>
+                <li><a href="<c:out value="consultar.htm?idEncuesta=${preguntas.id}"/>">Consultar respuestas</a></li>
                 <li class="active">Borrar Respuesta</li>
             </ol>
             
             <div class="panel panel-danger">
-                <div class="panel-heading">Confirmación para borrar usuario</div>
+                <div class="panel-heading">Formulario para borrar Respuesta</div>
                 <div class="panel-body">
                     <h1>Borrar Respuesta</h1>
-                    <form:form method="post" commandName="BorrarEncuesta">
+                    
+                    <form:form method="get" commandName="preguntas">
+                    <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
+                        <div class="form-group">
+                            <form:label path="textoPregunta">Pregunta</form:label>
+                            <form:input path="textoPregunta" cssClass="form-control"></form:input>
+                        </div>
+                    </form:form>
+                    
+                <form:form method="post" commandName="respuestas">
                     <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
                     <div class="form-group">
-                        <form:label path="textoPregunta">Pregunta</form:label>
-                        <div class="form-control"><c:out value="${textoPregunta}"></c:out></div>
+                        <form:label path="textoRespuesta">Respuesta</form:label>
+                        <form:input path="textoRespuesta" cssClass="form-control"></form:input>
                     </div>
                     <div class="form-group">
-                        <form:label path="textoPregunta">Respuesta</form:label>
-                        <div class="form-control"><c:out value="${textoPregunta}"></c:out></div>
-                    </div>
-                    <div class="form-group">
-                        <form:label path="textoPregunta">Número</form:label>
-                        <div class="form-control"><c:out value="${textoPregunta}"></c:out></div>
+                        <form:label path="numeroRespuestas">Número</form:label>
+                        <form:input path="numeroRespuestas" cssClass="form-control"></form:input>
                     </div>
                     
                     <p  style="text-align: center;">
@@ -42,8 +47,8 @@
                             <span class="glyphicon glyphicon-home" aria-hidden="true">
                             </span> Volver 
                         </a>
-                    <input class="btn btn-danger" type="submit" value="Borrar"/>
-                    </p>
+                            
+                        <input class="btn btn-danger" type="submit" value="Borrar Respuesta "/>
                 </form:form>
                 </div>
             </div>

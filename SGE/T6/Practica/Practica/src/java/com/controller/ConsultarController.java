@@ -4,8 +4,6 @@ package com.controller;
 import com.modelos.Conectar;
 import com.modelos.Preguntas;
 import com.modelos.Respuesta;
-import com.modelos.Usuarios;
-import com.modelos.UsuariosValidar;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -25,11 +23,9 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("consultar.htm")
 public class ConsultarController {
     
-    UsuariosValidar usuariosValidar;
     private JdbcTemplate jdbcTemplate;
     
     public ConsultarController() {
-        this.usuariosValidar = new UsuariosValidar();
         Conectar con = new Conectar();
         this.jdbcTemplate = new JdbcTemplate(con.conectar());
     }
@@ -37,14 +33,14 @@ public class ConsultarController {
     @RequestMapping(method = RequestMethod.GET)
     public  ModelAndView form(HttpServletRequest request) {
         ModelAndView mav = new ModelAndView();
-        int id =  Integer.parseInt(request.getParameter("idEncuesta"));
-        Preguntas datos = this.SelectPreguntas(id);
+        int idEncuesta =  Integer.parseInt(request.getParameter("idEncuesta"));
+        Preguntas datos = this.SelectPreguntas(idEncuesta);
         
-        String sql = "SELECT * FROM respuesta where idEncuesta = '"+id+"'";
+        String sql = "SELECT * FROM respuesta where idEncuesta = '"+idEncuesta+"'";
         List respuestas = jdbcTemplate.queryForList(sql);
         
         mav.setViewName("consultar");
-        mav.addObject("pregunta", new Preguntas(id,datos.getTextoPregunta()));
+        mav.addObject("pregunta", new Preguntas(idEncuesta,datos.getTextoPregunta()));
         mav.addObject("Respuestas", respuestas);
         return mav;
     }
@@ -60,20 +56,6 @@ public class ConsultarController {
                     pregunta.setTextoPregunta(rs.getString("textoPregunta"));
                 }
                 return pregunta;
-            }
-        });
-    }
-
-    private Respuesta SelectRespuestas(int id) {
-        final Respuesta respuesta = new Respuesta();
-        String sql = "SELECT * FROM respuesta where idEncuesta = '"+id+"'";
-        return (Respuesta) jdbcTemplate.query(sql, new ResultSetExtractor<Respuesta>(){
-            public Respuesta extractData(ResultSet rs) throws SQLException, DataAccessException {
-                if (rs.next()) {
-                    respuesta.setTextoRespuesta(rs.getString("textoRespuesta"));
-                    respuesta.setNumeroRespuestas(rs.getInt("numeroRespuestas"));
-                }
-                return respuesta;
             }
         });
     }

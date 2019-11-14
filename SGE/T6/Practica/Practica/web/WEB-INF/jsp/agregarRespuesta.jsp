@@ -13,8 +13,8 @@
         <div class="container">
             
             <ol class="breadcrumb">
-                <li><a href="<c:out value="home.htm"/>">Mantenimiento de Encuestas</a></li>
-                <li><a href="<c:out value="home.htm"/>">Consultar respuesta</a></li>
+                <li><a href="<c:out value="home.htm"/>">Mantenimiento de encuestas</a></li>
+                <li><a href="<c:out value="consultar.htm?idEncuesta=${pregunta.id}"/>">Consultar respuestas</a></li>
                 <li class="active">Agregar Respuestas</li>
             </ol>
             

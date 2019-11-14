@@ -3,8 +3,6 @@ package com.controller;
 
 import com.modelos.Conectar;
 import com.modelos.Preguntas;
-import com.modelos.Usuarios;
-import com.modelos.UsuariosValidar;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.servlet.http.HttpServletRequest;
@@ -12,22 +10,18 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("delete.htm")
 public class DeleteController {
 
-    UsuariosValidar usuariosValidar;
     private JdbcTemplate jdbcTemplate;
     
     public DeleteController() {
-        this.usuariosValidar = new UsuariosValidar();
         Conectar con = new Conectar();
         this.jdbcTemplate = new JdbcTemplate(con.conectar());
     }

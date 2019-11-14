@@ -13,14 +13,14 @@
         <div class="container">
             
             <ol class="breadcrumb">
-                <li><a href="<c:out value="/home.htm"/>">Listado de usuarios</a></li>
+                <li><a href="<c:out value="home.htm"/>">Mantenimiento de encuestas</a></li>
                 <li class="active">Borrar</li>
             </ol>
             
             <div class="panel panel-danger">
-                <div class="panel-heading">Confirmación para borrar usuario</div>
+                <div class="panel-heading">Confirmación para borrar Encuesta</div>
                 <div class="panel-body">
-                    <h1>Borrar usuario</h1>
+                    <h1>Borrar Encuesta</h1>
                     <form:form method="post" commandName="BorrarEncuesta">
                     <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
                     <div class="form-group">
