@@ -2,9 +2,8 @@
 package com.controller;
 
 import com.modelos.Conectar;
+import com.modelos.EncuestaValidar;
 import com.modelos.Preguntas;
-import com.modelos.Usuarios;
-import com.modelos.UsuariosValidar;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.servlet.http.HttpServletRequest;
@@ -23,11 +22,11 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("edit.htm")
 public class EditController {
 
-    UsuariosValidar usuariosValidar;
+    EncuestaValidar encuestaValidar;
     private JdbcTemplate jdbcTemplate;
     
     public EditController() {
-        this.usuariosValidar = new UsuariosValidar();
+        this.encuestaValidar = new EncuestaValidar();
         Conectar con = new Conectar();
         this.jdbcTemplate = new JdbcTemplate(con.conectar());
     }
@@ -44,12 +43,22 @@ public class EditController {
     
     @RequestMapping(method=RequestMethod.POST)
     public ModelAndView form(@ModelAttribute("preguntas") Preguntas preguntas,
+                                BindingResult result,
+                                SessionStatus status,
                                 HttpServletRequest request) {
+    this.encuestaValidar.validate(preguntas, result);
     
-    int id = Integer.parseInt(request.getParameter("idEncuesta"));
+    if(result.hasErrors()){
+            ModelAndView mav = new ModelAndView();
+            mav.setViewName("edit");
+            mav.addObject("preguntas", new Preguntas());
+            return  mav;
+        } else {
+            int id = Integer.parseInt(request.getParameter("idEncuesta"));
             this.jdbcTemplate.update("update encuesta set textoPregunta=? where idEncuesta=?",
                                      preguntas.getTextoPregunta(),id);
             return new ModelAndView("redirect:/home.htm");
+        }
     } 
 
     private Preguntas SelectPreguntas(int id) {

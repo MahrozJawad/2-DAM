@@ -26,8 +26,8 @@
                 <prop key="delete.htm">deleteController</prop>
                 <prop key="consultar.htm">consultarController</prop>
                 <prop key="agregarRespuesta.htm">agregarRespuestaController</prop>
-                <prop key="borrarRespuesta">borrarRespuestasController</prop>
-                <prop key="editarRespuesta">editarRespuestaController</prop>
+                <prop key="borrarRespuesta.htm">borrarRespuestasController</prop>
+                <prop key="editarRespuesta.htm">editarRespuestaController</prop>
             </props>
         </property>
     </bean>

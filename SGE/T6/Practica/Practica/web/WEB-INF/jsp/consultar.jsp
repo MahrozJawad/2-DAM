@@ -55,11 +55,11 @@
                             <td><c:out value="${dato.textoRespuesta}"></c:out></td>
                             <td><c:out value="${dato.numeroRespuestas}"></c:out></td>
                                 <td>
-                                    <a href="<c:url value="editarRespuesta.htm"></c:url>" class="btn btn-primary btn-xs">
+                                    <a href="<c:url value="editarRespuesta.htm?idEncuesta=${pregunta.id}&idRespuesta=${dato.idRespuesta}"></c:url>" class="btn btn-primary btn-xs">
                                         <span class="glyphicon glyphicon-pencil" aria-hidden="true">
                                         </span> Editar
                                     </a>
-                                    <a href="<c:url value="borrarRespuesta.htm"></c:url>" class="btn btn-danger btn-xs">
+                                    <a href="<c:url value="borrarRespuesta.htm?idEncuesta=${pregunta.id}&idRespuesta=${dato.idRespuesta}"></c:url>" class="btn btn-danger btn-xs">
                                         <span class="glyphicon glyphicon-trash" aria-hidden="true">
                                         </span> Borrar
                                     </a>    

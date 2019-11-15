@@ -56,7 +56,7 @@ public class EditController {
             return  mav;
         } else {
             this.jdbcTemplate.update("update usuarios set nombre=?,correo=? where id=?",
-                                     preguntas.getNombre(),preguntas.getCorreo(),id);
+                                     preguntas.getStringPregunta(),preguntas.getStringPregunta(),id);
             return new ModelAndView("redirect:/home.htm");
         }
     } 

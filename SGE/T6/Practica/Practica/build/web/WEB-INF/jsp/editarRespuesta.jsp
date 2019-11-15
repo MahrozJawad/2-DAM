@@ -13,8 +13,8 @@
         <div class="container">
             
             <ol class="breadcrumb">
-                <li><a href="<c:out value="/home.htm"/>">Mantenimiento de encuestas</a></li>
-                <li><a href="<c:out value="/consultar.htm"/>">Consultar respuestas</a></li>
+                <li><a href="<c:out value="home.htm"/>">Mantenimiento de encuestas</a></li>
+                <li><a href="<c:out value="consultar.htm?idEncuesta=${preguntas.id}"/>">Consultar respuestas</a></li>
                 <li class="active">Editar Respuesta</li>
             </ol>
             
@@ -42,7 +42,6 @@
                         <form:input path="numeroRespuestas" cssClass="form-control"></form:input>
                     </div>
                     
-                    <p  style="text-align: center;">
                         <a href="<c:url value="home.htm"/>" class="btn btn-warning">
                             <span class="glyphicon glyphicon-home" aria-hidden="true">
                             </span> Volver 
