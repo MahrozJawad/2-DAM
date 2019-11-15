@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-nov-2019 8:58:13 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="bdseriestv.Series" table="series" catalog="bdseriestv" optimistic-lock="version">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="codigo" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="cadenastv" class="bdseriestv.Cadenastv" fetch="select">
+            <column name="canaltv" length="4" />
+        </many-to-one>
+        <property name="titulo" type="string">
+            <column name="titulo" length="60" />
+        </property>
+        <property name="duracion" type="int">
+            <column name="duracion" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
