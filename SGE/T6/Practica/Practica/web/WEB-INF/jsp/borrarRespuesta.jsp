@@ -43,12 +43,13 @@
                     </div>
                     
                     <p  style="text-align: center;">
-                        <a href="<c:url value="home.htm"/>" class="btn btn-warning">
+                        <a style="margin-right: 30%" href="<c:url value="home.htm"/>" class="btn btn-warning">
                             <span class="glyphicon glyphicon-home" aria-hidden="true">
                             </span> Volver 
                         </a>
                             
                         <input class="btn btn-danger" type="submit" value="Borrar Respuesta "/>
+                        </p>
                 </form:form>
                 </div>
             </div>
