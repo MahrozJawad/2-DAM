@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-nov-2019 2:48:04 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="bdseriestv.Series" table="series" catalog="bdseriestv" optimistic-lock="version">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="codigo" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="cadenastv" class="bdseriestv.Cadenastv" fetch="select">
+            <column name="canaltv" length="4" />
+        </many-to-one>
+        <property name="titulo" type="string">
+            <column name="titulo" length="60" />
+        </property>
+        <property name="duracion" type="int">
+            <column name="duracion" not-null="true" />
+        </property>
+        <set name="actoreses" table="participaciones" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="serie" not-null="true" />
+            </key>
+            <many-to-many entity-name="bdseriestv.Actores">
+                <column name="actor" length="6" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

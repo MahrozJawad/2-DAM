@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-nov-2019 2:48:04 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="bdseriestv.Cadenastv" table="cadenastv" catalog="bdseriestv" optimistic-lock="version">
+        <id name="codigo" type="string">
+            <column name="codigo" length="4" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="35" />
+        </property>
+        <set name="serieses" table="series" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="canaltv" length="4" />
+            </key>
+            <one-to-many class="bdseriestv.Series" />
+        </set>
+    </class>
+</hibernate-mapping>
