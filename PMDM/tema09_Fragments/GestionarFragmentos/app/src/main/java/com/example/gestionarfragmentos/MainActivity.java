@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         final Fragment fragment1 = new Fragment1();
         final Fragment fragment2 = new Fragment2();
 
-        Button button = findViewById(R.id.bottom);
+        Button button = findViewById(R.id.boton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

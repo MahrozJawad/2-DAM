@@ -7,18 +7,18 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <fragment
-        android:name="com.example.gestionarfragmentos.Fragment1"
-        android:id="@+id/fragment1"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        tools:layout="@layout/fragment1"/>
+
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
         android:background="#3355CC00"
         />
 
+    <Button
+        android:id="@+id/boton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cambia fragment"/>
 
 </LinearLayout>
