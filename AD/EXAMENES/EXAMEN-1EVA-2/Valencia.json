@@ -1,0 +1,61 @@
+[
+  {
+    "idtienda": "V01",
+    "provincia": "Valencia",
+    "creada": "2014-02-15",
+    "encargado": "Jorge González",
+    "trabajadores": 6,
+    "emails": [
+      {
+        "idtienda": "V01",
+        "email": "jorge.gon@gmail.com"
+      },
+      {
+        "idtienda": "V01",
+        "email": "v01@telefood.es"
+      }
+    ]
+  },
+  {
+    "idtienda": "V02",
+    "provincia": "Valencia",
+    "creada": "2016-09-20",
+    "encargado": "Marta Rodríguez",
+    "trabajadores": 3,
+    "emails": [
+      {
+        "idtienda": "V02",
+        "email": "marta.rod@gmail.com"
+      },
+      {
+        "idtienda": "V02",
+        "email": "v02@telefood.es"
+      }
+    ]
+  },
+  {
+    "idtienda": "V03",
+    "provincia": "Valencia",
+    "creada": "2019-07-05",
+    "encargado": "Ana Romero",
+    "trabajadores": 2,
+    "emails": [
+      {
+        "idtienda": "V03",
+        "email": "DD@FF.ES"
+      },
+      {
+        "idtienda": "V03",
+        "email": "dd@prueba.es"
+      },
+      {
+        "idtienda": "V03",
+        "email": "mrod@hotmail.com"
+      },
+      {
+        "idtienda": "V03",
+        "email": "v03@telefood.es"
+      }
+    ]
+  }
+]

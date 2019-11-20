@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-nov-2019 9:12:39 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="bdtelefood.Emails" table="emails" catalog="bdtelefood" optimistic-lock="version">
+        <composite-id name="id" class="bdtelefood.EmailsId">
+            <key-property name="idtienda" type="string">
+                <column name="idtienda" length="3" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="tiendas" class="bdtelefood.Tiendas" update="false" insert="false" fetch="select">
+            <column name="idtienda" length="3" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
