@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-nov-2019 9:16:31 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="bibliotecah2.Autores" table="autores" catalog="bibliotecah2" optimistic-lock="version">
+        <id name="cod" type="string">
+            <column name="cod" length="5" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="60" />
+        </property>
+        <set name="libroses" table="libros" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codautor" length="5" />
+            </key>
+            <one-to-many class="bibliotecah2.Libros" />
+        </set>
+    </class>
+</hibernate-mapping>

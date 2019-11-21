@@ -1,0 +1,19 @@
+[
+  {
+    "idtienda": "C01",
+    "provincia": "Castellón",
+    "creada": "2014-06-28",
+    "encargado": "Lorena Fernández",
+    "trabajadores": 2,
+    "emails": [
+      {
+        "idtienda": "C01",
+        "email": "c01@telefood.es"
+      },
+      {
+        "idtienda": "C01",
+        "email": "lorena.fer@gmail.com"
+      }
+    ]
+  }
+]

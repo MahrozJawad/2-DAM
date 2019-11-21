@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-nov-2019 23:42:29 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="bdtelefood.Tiendas" table="tiendas" catalog="bdtelefood" optimistic-lock="version">
+        <id name="idtienda" type="string">
+            <column name="idtienda" length="3" />
+            <generator class="assigned" />
+        </id>
+        <property name="provincia" type="string">
+            <column name="provincia" length="20" />
+        </property>
+        <property name="creada" type="date">
+            <column name="creada" length="10" />
+        </property>
+        <property name="encargado" type="string">
+            <column name="encargado" length="30" />
+        </property>
+        <property name="trabajadores" type="java.lang.Integer">
+            <column name="trabajadores" />
+        </property>
+        <set name="emailses" table="emails" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idtienda" length="3" not-null="true" />
+            </key>
+            <one-to-many class="bdtelefood.Emails" />
+        </set>
+    </class>
+</hibernate-mapping>

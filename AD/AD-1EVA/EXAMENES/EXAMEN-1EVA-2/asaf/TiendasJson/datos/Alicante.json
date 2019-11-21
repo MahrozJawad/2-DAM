@@ -1,0 +1,40 @@
+[
+  {
+    "idtienda": "A01",
+    "provincia": "Alicante",
+    "creada": "2012-10-03",
+    "encargado": "Sergio López",
+    "trabajadores": 4,
+    "emails": [
+      {
+        "idtienda": "A01",
+        "email": "a01@telefood.es"
+      },
+      {
+        "idtienda": "A01",
+        "email": "sergio.lop@gmail.com"
+      },
+      {
+        "idtienda": "A01",
+        "email": "slop@hotmail.com"
+      }
+    ]
+  },
+  {
+    "idtienda": "A02",
+    "provincia": "Alicante",
+    "creada": "2016-05-10",
+    "encargado": "Antonio Sánchez",
+    "trabajadores": 2,
+    "emails": [
+      {
+        "idtienda": "A02",
+        "email": "a02@telefood.es"
+      },
+      {
+        "idtienda": "A02",
+        "email": "antonio.san@gmail.com"
+      }
+    ]
+  }
+]
