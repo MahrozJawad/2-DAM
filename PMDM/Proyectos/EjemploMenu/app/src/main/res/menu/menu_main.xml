@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ejemplomenu.MainActivity">
+    <item android:id="@+id/popmenu1"
+        android:title="CambiarTexto"></item>
+    <item android:id="@+id/popmenu2"
+        android:title="CambiarColor"></item>
+</menu>
