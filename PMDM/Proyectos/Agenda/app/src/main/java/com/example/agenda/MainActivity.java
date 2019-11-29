@@ -25,9 +25,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View.OnLongClickListener;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -38,13 +40,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnLongClickListener {
+public class MainActivity extends AppCompatActivity implements OnLongClickListener {
 
     private static final int CODIGO_EDITAR = 2;
     private static final int CODIGO_GALERIA = 1;
     ArrayList<Persona> datos = new ArrayList<>();
-    private SwipeDetector swipeDetector = new SwipeDetector();
     String imagenPorDefecto;
+    private SwipeDetector swipeDetector;
 
     RecyclerView recyclerView;
     Adaptador adaptador;
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
                                 e.printStackTrace();
                             }
                             Bitmap bmp = BitmapFactory.decodeStream(imageStream);
-                            datos.get(pos).setImagen(BitmapAString(bmp));
+                            datos.get(pos).setImagen(BitmapAString(Bitmap.createScaledBitmap(bmp, 100,100, true)));
                         }
                     }
                 }
@@ -95,7 +97,6 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         recyclerView.setAdapter(adaptador);
     }
 
-    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,10 +123,10 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
 
         recyclerView = findViewById(R.id.recycler);
         adaptador=new Adaptador(this);
-        recyclerView.setAdapter(adaptador);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        adaptador.SetOnTouchListener(swipeDetector);
 
+        adaptador.SetOnLongClick(this);
+        swipeDetector = new SwipeDetector();
         adaptador.setClickOnView(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,45 +134,48 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
                 if (swipeDetector.swipeDetected()) {
                     switch (swipeDetector.getAction()) {
                         case LR:
-                            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                            builder.setMessage("¿Estas seguro que quieres llamar a " + datos.get(pos).getNombre() + "?");
-                            builder.setPositiveButton("LLAMAR", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                        Intent intent = new Intent(Intent.ACTION_DIAL);
-                                        intent.setData(Uri.parse("telefono:" + datos.get(pos).getTelefono()));
-                                        if (intent.resolveActivity(getPackageManager()) != null) {
-                                            startActivity(intent);
-                                        }
-                                }
-                            });
-                            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.cancel();
-                                }
-                            });
-                            builder.create().show();
+                            Toast.makeText(getApplicationContext(), "LR", Toast.LENGTH_LONG).show();
+//                            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//                            builder.setMessage("¿Estas seguro que quieres llamar a " + datos.get(pos).getNombre() + "?");
+//                            builder.setPositiveButton("LLAMAR", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                        Intent intent = new Intent(Intent.ACTION_DIAL);
+//                                        intent.setData(Uri.parse("telefono:" + datos.get(pos).getTelefono()));
+//                                        if (intent.resolveActivity(getPackageManager()) != null) {
+//                                            startActivity(intent);
+//                                        }
+//                                }
+//                            });
+//                            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    dialog.cancel();
+//                                }
+//                                }
+//                            });
+//                            builder.create().show();
                             break;
                         case RL:
-                            builder = new AlertDialog.Builder(MainActivity.this);
-                            builder.setMessage("¿Estas seguro que quieres enviar mensaje a " + datos.get(pos).getNombre() + "?");
-                            builder.setPositiveButton("enviar", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                        Intent intent = new Intent(Intent.ACTION_SENDTO);
-                                        intent.setData(Uri.fromParts("mailto", datos.get(pos).getCorreo(), null));
-                                        Intent chooser = Intent.createChooser(intent, "Enviar mensaje...");
-                                        startActivity(chooser);
-                                }
-                            });
-                            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.cancel();
-                                }
-                            });
-                            builder.create().show();
+                            Toast.makeText(getApplicationContext(), "RL", Toast.LENGTH_LONG).show();
+//                            builder = new AlertDialog.Builder(MainActivity.this);
+//                            builder.setMessage("¿Estas seguro que quieres enviar mensaje a " + datos.get(pos).getNombre() + "?");
+//                            builder.setPositiveButton("enviar", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                        Intent intent = new Intent(Intent.ACTION_SENDTO);
+//                                        intent.setData(Uri.fromParts("mailto", datos.get(pos).getCorreo(), null));
+//                                        Intent chooser = Intent.createChooser(intent, "Enviar mensaje...");
+//                                        startActivity(chooser);
+//                                }
+//                            });
+//                            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    dialog.cancel();
+//                                }
+//                            });
+//                            builder.create().show();
                             break;
                     }
                 } else {
@@ -191,6 +195,9 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
 
             }
         });
+        recyclerView.setAdapter(adaptador);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
     }
 
     private void EditarDatos() {
@@ -254,6 +261,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
             }
         });
         builder.create().show();
-        return false;
+        return true;
     }
+
 }

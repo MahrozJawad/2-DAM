@@ -40,12 +40,9 @@ public class Holder extends RecyclerView.ViewHolder implements View.OnClickListe
         if(listener!=null) this.listener= listener;
     }
 
-    public ImageView ImagenActual() {
-        return imagen;
-    }
-
     @Override
     public void onClick(View view) {
+        ((MainActivity)context).pos = getAdapterPosition();
         if (listener != null) listener.onClick(view);
     }
 }
