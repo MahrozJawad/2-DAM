@@ -1,11 +1,17 @@
 package com.example.agenda;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -14,18 +20,27 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class EditarContacto extends AppCompatActivity {
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+
+public class EditarContacto extends AppCompatActivity implements View.OnClickListener {
+
+    private static final int CODIGO_GALERIA = 1;
 
     private Persona p = null;
+    private ImageView imagen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_edit_contact);
+
         final EditText editTextNombre = findViewById(R.id.editText);
         final EditText editTextApellidos = findViewById(R.id.editText2);
         final EditText editTextTelefono = findViewById(R.id.editText3);
         final EditText editTextCorreo = findViewById(R.id.editText4);
-        final ImageView imagen = findViewById(R.id.imagen);
+        imagen = findViewById(R.id.imagen);
+        imagen.setOnClickListener(this);
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
 
         Intent intentR = getIntent();
@@ -57,7 +72,16 @@ public class EditarContacto extends AppCompatActivity {
                     p.setApellidos(editTextApellidos.getText().toString());
                     p.setCorreo(editTextCorreo.getText().toString());
                     p.setTelefono(editTextTelefono.getText().toString());
-                    p.setImagen(p.getImagen());
+
+                    BitmapDrawable drawable = (BitmapDrawable) imagen.getDrawable();
+                    if(drawable != null) {
+                        Bitmap bitmap = drawable.getBitmap();
+                        p.setImagen(MainActivity.BitmapAString(bitmap));
+                    }
+                    else
+                        p.setImagen(MainActivity.BitmapAString(BitmapFactory.decodeResource(EditarContacto.this.getResources(), R.drawable.pordefecto_imagen)));
+
+
                     if(!p.getNombre().equals("")){
                         intent.putExtra("PersonaEditado", p);
                         setResult(RESULT_OK, intent);
@@ -104,6 +128,44 @@ public class EditarContacto extends AppCompatActivity {
             DrawableCompat.setTint(d, ContextCompat.getColor(getApplicationContext(),R.color.design_default_color_primary));
         else
             DrawableCompat.setTint(d, ContextCompat.getColor(getApplicationContext(),R.color.design_default_color_primary_dark));
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(
+                Intent.createChooser(intent, "Seleccione una imagen"),
+                CODIGO_GALERIA);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Uri selectedImage;
+
+        switch (requestCode) {
+            case CODIGO_GALERIA:
+                if (resultCode == RESULT_OK) {
+                    selectedImage = data.getData();
+                    String selectedPath = selectedImage.getPath();
+                    if (requestCode == 1) {
+                        if (selectedPath != null) {
+                            InputStream imageStream = null;
+                            try {
+                                imageStream = getContentResolver().openInputStream(
+                                        selectedImage);
+                            } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                            Bitmap bmp = BitmapFactory.decodeStream(imageStream);
+                            imagen.setImageBitmap(Bitmap.createScaledBitmap(bmp, 100, 100, true));
+                        }
+                    }
+                }
+                break;
+        }
     }
 
 }

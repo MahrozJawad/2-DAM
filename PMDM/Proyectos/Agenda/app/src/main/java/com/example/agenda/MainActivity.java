@@ -40,10 +40,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements OnLongClickListener {
+import static com.example.agenda.SwipeDetector.Action.RL;
+
+public class MainActivity extends AppCompatActivity implements OnLongClickListener, View.OnClickListener {
 
     private static final int CODIGO_EDITAR = 2;
     private static final int CODIGO_GALERIA = 1;
+    private static final int CODIGO_AÑADIR = 3;
     ArrayList<Persona> datos = new ArrayList<>();
     String imagenPorDefecto;
     private SwipeDetector swipeDetector;
@@ -93,6 +96,15 @@ public class MainActivity extends AppCompatActivity implements OnLongClickListen
                     }
                 }
                 break;
+            case CODIGO_AÑADIR:
+                if (resultCode == RESULT_OK) {
+                    p = data.getParcelableExtra("PersonaEditado");
+                    if(p != null){
+                        p.setImagen(imagenPorDefecto);
+                        datos.add(p);
+                    }
+                }
+                break;
         }
         recyclerView.setAdapter(adaptador);
     }
@@ -111,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements OnLongClickListen
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Añadir Contacto", Toast.LENGTH_SHORT).show();
+                AñadirDatos();
             }
         });
 
@@ -123,66 +135,11 @@ public class MainActivity extends AppCompatActivity implements OnLongClickListen
 
         recyclerView = findViewById(R.id.recycler);
         adaptador=new Adaptador(this);
-        adaptador.SetOnTouchListener(swipeDetector);
 
         adaptador.SetOnLongClick(this);
         swipeDetector = new SwipeDetector();
-        adaptador.setClickOnView(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pos = recyclerView.getChildAdapterPosition(v);
-                if (swipeDetector.swipeDetected()) {
-                    switch (swipeDetector.getAction()) {
-                        case LR:
-                            Toast.makeText(getApplicationContext(), "LR", Toast.LENGTH_LONG).show();
-//                            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-//                            builder.setMessage("¿Estas seguro que quieres llamar a " + datos.get(pos).getNombre() + "?");
-//                            builder.setPositiveButton("LLAMAR", new DialogInterface.OnClickListener() {
-//                                @Override
-//                                public void onClick(DialogInterface dialog, int which) {
-//                                        Intent intent = new Intent(Intent.ACTION_DIAL);
-//                                        intent.setData(Uri.parse("telefono:" + datos.get(pos).getTelefono()));
-//                                        if (intent.resolveActivity(getPackageManager()) != null) {
-//                                            startActivity(intent);
-//                                        }
-//                                }
-//                            });
-//                            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-//                                @Override
-//                                public void onClick(DialogInterface dialog, int which) {
-//                                    dialog.cancel();
-//                                }
-//                                }
-//                            });
-//                            builder.create().show();
-                            break;
-                        case RL:
-                            Toast.makeText(getApplicationContext(), "RL", Toast.LENGTH_LONG).show();
-//                            builder = new AlertDialog.Builder(MainActivity.this);
-//                            builder.setMessage("¿Estas seguro que quieres enviar mensaje a " + datos.get(pos).getNombre() + "?");
-//                            builder.setPositiveButton("enviar", new DialogInterface.OnClickListener() {
-//                                @Override
-//                                public void onClick(DialogInterface dialog, int which) {
-//                                        Intent intent = new Intent(Intent.ACTION_SENDTO);
-//                                        intent.setData(Uri.fromParts("mailto", datos.get(pos).getCorreo(), null));
-//                                        Intent chooser = Intent.createChooser(intent, "Enviar mensaje...");
-//                                        startActivity(chooser);
-//                                }
-//                            });
-//                            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-//                                @Override
-//                                public void onClick(DialogInterface dialog, int which) {
-//                                    dialog.cancel();
-//                                }
-//                            });
-//                            builder.create().show();
-                            break;
-                    }
-                } else {
-                    EditarDatos();
-                }
-            }
-        });
+        adaptador.setClickOnView(this);
+        adaptador.SetOnTouchListener(swipeDetector);
         adaptador.setClickImage(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -205,6 +162,12 @@ public class MainActivity extends AppCompatActivity implements OnLongClickListen
         Persona p = datos.get(pos);
         intent.putExtra("DatoPersona", p);
         startActivityForResult(intent,CODIGO_EDITAR);
+    }
+    private void AñadirDatos() {
+        Intent intent = new Intent(MainActivity.this, EditarContacto.class);
+        Persona p = null;
+        intent.putExtra("DatoPersona", p);
+        startActivityForResult(intent,CODIGO_AÑADIR);
     }
 
     @Override
@@ -264,4 +227,55 @@ public class MainActivity extends AppCompatActivity implements OnLongClickListen
         return true;
     }
 
+    @Override
+    public void onClick(View v) {
+        pos = recyclerView.getChildAdapterPosition(v);
+        if (swipeDetector.swipeDetected()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            switch (swipeDetector.getAction()) {
+                case LR:
+                        builder.setMessage("¿Estas seguro que quieres llamar a " + datos.get(pos).getNombre() + "?");
+                        builder.setPositiveButton("LLAMAR", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                                    intent.setData(Uri.parse("telefono:" + datos.get(pos).getTelefono()));
+                                    if (intent.resolveActivity(getPackageManager()) != null) {
+                                        startActivity(intent);
+                                    }
+                            }
+                        });
+                        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                        });
+                        builder.create().show();
+                    break;
+                case RL:
+                        builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setMessage("¿Estas seguro que quieres enviar mensaje a " + datos.get(pos).getNombre() + "?");
+                        builder.setPositiveButton("enviar", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = new Intent(Intent.ACTION_SENDTO);
+                                    intent.setData(Uri.fromParts("mailto", datos.get(pos).getCorreo(), null));
+                                    Intent chooser = Intent.createChooser(intent, "Enviar mensaje...");
+                                    startActivity(chooser);
+                            }
+                        });
+                        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                        builder.create().show();
+                    break;
+            }
+        } else {
+            EditarDatos();
+        }
+    }
 }

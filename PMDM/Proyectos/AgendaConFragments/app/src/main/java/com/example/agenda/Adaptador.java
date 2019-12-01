@@ -27,12 +27,7 @@ public class Adaptador extends RecyclerView.Adapter implements View.OnClickListe
         view.setOnClickListener(this);
         view.setOnLongClickListener(this);
         h = new Holder(view,c);
-        h.setImagenListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(listenerImagen!=null) listenerImagen.onClick(view);
-            }
-        });
+
         return h;
     }
 
@@ -41,9 +36,6 @@ public class Adaptador extends RecyclerView.Adapter implements View.OnClickListe
         ((Holder)holder).bind(((MainActivity)c).datos.get(position), position);
     }
 
-    public  void setClickImage(View.OnClickListener listener) {
-        if(listener!=null) listenerImagen= listener;
-    }
     public  void setClickOnView(View.OnClickListener listener) {
         if(listener!=null) this.listener= listener;
     }

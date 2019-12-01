@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">AgendaRecyclerView</string>
+    <string name="app_name">AgendaFragmento</string>
     <string name="action_settings">Settings</string>
 </resources>
