@@ -13,7 +13,7 @@ public class EcoCliente {
       // servidor que est� en la misma m�quina que el cliente
       // y que escucha en el puerto 4444
       try {
-        socketCliente = new Socket("localhost", 4444);
+        socketCliente = new Socket("192.168.0.21", 4444);
         // Obtenemos el canal de entrada
         entrada = new BufferedReader(new InputStreamReader(socketCliente.getInputStream()));
         // Obtenemos el canal de salida
