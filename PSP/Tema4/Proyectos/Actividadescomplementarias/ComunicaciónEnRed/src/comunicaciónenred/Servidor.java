@@ -1,9 +1,9 @@
-package servidorchiste;
+package comunicaciónenred;
 
 import java.net.*;
 import java.io.*;
 
-public class KnockKnockServer {
+public class Servidor {
     public static void main(String[] args) throws IOException {
 
         ServerSocket serverSocket = null;
@@ -29,7 +29,7 @@ public class KnockKnockServer {
 				new InputStreamReader(
 				clientSocket.getInputStream()));
         String inputLine, outputLine;
-        KnockKnockProtocol kkp = new KnockKnockProtocol();
+        Protocol kkp = new Protocol();
 
         outputLine = kkp.processInput(null);
         out.println(outputLine);

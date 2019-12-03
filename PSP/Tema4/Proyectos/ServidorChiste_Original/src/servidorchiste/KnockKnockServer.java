@@ -9,7 +9,7 @@ public class KnockKnockServer {
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(4444);
-	    System.out.println("estoy después de crear el socket");
+	    System.out.println("estoy despu�s de crear el socket");
         } catch (IOException e) {
             System.err.println("Could not listen on port: 4444.");
             System.exit(1);
@@ -18,7 +18,7 @@ public class KnockKnockServer {
         Socket clientSocket = null;
         try {
             clientSocket = serverSocket.accept();
-	    System.out.println("estoy después de aceptar un cliente");
+	    System.out.println("estoy despu�s de aceptar un cliente");
         } catch (IOException e) {
             System.err.println("Accept failed.");
             System.exit(1);
