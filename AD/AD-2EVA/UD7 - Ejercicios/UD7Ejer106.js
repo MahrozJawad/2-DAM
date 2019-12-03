@@ -1,25 +1,49 @@
 
-use libreria
+use gimnasio;
 
-db.libros.insert(
+db.clientes.insert(
 	[
 		{
-			"ISBN": '978-84-1545-219-5',
-			"título":"Implantación de Sistemas Operativos",
-			"autores":['Juan López'],
-			"paginas":500,
-			"año de edición":2012,
-			"editorial":'garceta',
-			"imagen de portada":'http://garceta.es/images/2195_IMSO.gif'
+			"_id":1,
+			"dni": '5025841d',
+			"nombre":"Juan",
+			"apellidos":"López",
+			"fecha de nacimiento": '20-12-1990',
+			"télefono": '631958452',
 		},
 		{
-			"ISBN": '978-84-1545-262-1',
-			"título":"Sistemas de Gestión Empresarial",
-			"autores":['César San Juan'],
-			"paginas":292,
-			"año de edición":2013,
-			"editorial":'garceta',
-			"imagen de portada":'http://garceta.es/images/2621_SGE.gif'
-		},
+			"_id":2,
+			"dni": '54296418t',
+			"nombre":"Paula",
+			"apellidos":"López",
+			"fecha de nacimiento": '19-03-1991',
+			"télefono": '632958743',
+		}
 	]
 );
+
+db.monitores.insert(
+	[
+		{
+			"id_monitor": 1,
+			"nombre": "José"
+			"apellidos": "González"
+		},
+		{
+			"id_monitor": 2,
+			"nombre":"Ramón",
+			"apellidos":"Fernández"
+		}
+	]
+);
+
+db.clases.insert(
+	[
+		{
+			"cod_clase":
+		}
+	]
+)
+
+
+

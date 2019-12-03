@@ -5,8 +5,11 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
 import android.view.Menu;
@@ -14,6 +17,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    RecyclerView recyclerView;
+    Adaptador adaptador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        recyclerView = findViewById(R.id.recycler);
+        adaptador=new Adaptador(this);
+        recyclerView.setAdapter(adaptador);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+
     }
 
     @Override
@@ -49,7 +60,22 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+
+        String s = "";
+        switch (item.getItemId()) {
+            case R.id.opmenu1:
+                s="Opcion uno del menu contextual";
+                break;
+            case R.id.opmenu2:
+                s="Opcion dos del menu contextual";
+                break;
+        }
+        Snackbar.make(recyclerView.getRootView(),s,Snackbar.LENGTH_SHORT).setAction("Aceptar", null).show();
+        return true;
     }
 }
