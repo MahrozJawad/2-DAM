@@ -33,7 +33,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     ArrayList<Persona> datos = new ArrayList<>();
     String imagenPorDefecto;
@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         imagenPorDefecto = BitmapAString(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.pordefecto_imagen),100,100,true));
         datos.add(new Persona("Nombre", "Apellido", "631637415", "m@hola.com", imagenPorDefecto));
