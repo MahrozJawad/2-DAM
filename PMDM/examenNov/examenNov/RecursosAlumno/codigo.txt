@@ -1,0 +1,65 @@
+ void añadirDatos()
+    {
+       datos.add(new Reparacion("1","Ana Sogor","01/11/2019","05/11/2019","El disco duro roto, cambiado por uno nuevo"));
+        datos.add(new Reparacion("2","Ana Sogor","01/11/2019","02/11/2019","Se ha instalado el sistema operativo de nuevo"));
+        datos.add(new Reparacion("3","Sofia Nieto","03/11/2019","05/11/2019","Problemas con la RAM, se ha sustituido"));
+        datos.add(new Reparacion("4","Luis García","04/11/2019","","Problemas con la placa base, a espera de que llegue la nueva"));
+        datos.add(new Reparacion("5","Luis García","04/11/2014","05/11/2019","Se ha liberado espacio en disco, y se ha añadido RAM"));
+    }
+	
+	////////////////////////////////////////////////////////////////////////
+	
+	public class Reparacion{
+    String codigo, tecnico, fchEntrada, fchSolucion, comentarios;
+
+    public Reparacion() {
+    }
+
+    public Reparacion(String codigo, String tecnico, String fchEntrada, String fchSolucion, String comentarios ) {
+        this.codigo = codigo;
+        this.comentarios = comentarios;
+        this.fchSolucion = fchSolucion;
+        this.fchEntrada = fchEntrada;
+        this.tecnico = tecnico;
+    }
+	
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public void setFchEntrada(String fchEntrada) {
+        this.fchEntrada = fchEntrada;
+    }
+
+    public void setComentarios(String comentarios) {
+        this.comentarios = comentarios;
+    }
+
+    public void setTecnico(String tecnico) {
+        this.tecnico = tecnico;
+    }
+
+    public void setFchSolucion(String fchSolucion) {
+        this.fchSolucion = fchSolucion;
+    }
+
+    public String getTecnico() {
+        return tecnico;
+    }
+
+    public String getFchEntrada() {
+        return fchEntrada;
+    }
+
+    public String getFchSolucion() {
+        return fchSolucion;
+    }
+
+    public String getComentarios() {
+        return comentarios;
+    }
+}
