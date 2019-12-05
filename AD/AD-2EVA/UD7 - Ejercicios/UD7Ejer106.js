@@ -10,6 +10,7 @@ db.clientes.insert(
 			"apellidos":"López",
 			"fecha de nacimiento": '20-12-1990',
 			"télefono": '631958452',
+			"clases":[1]
 		},
 		{
 			"_id":2,
@@ -18,6 +19,7 @@ db.clientes.insert(
 			"apellidos":"López",
 			"fecha de nacimiento": '19-03-1991',
 			"télefono": '632958743',
+			"clase":[1,2]
 		}
 	]
 );
@@ -28,6 +30,7 @@ db.monitores.insert(
 			"id_monitor": 1,
 			"nombre": "José"
 			"apellidos": "González"
+			
 		},
 		{
 			"id_monitor": 2,
@@ -40,8 +43,15 @@ db.monitores.insert(
 db.clases.insert(
 	[
 		{
-			"cod_clase":
+			"cod_clase":1
+		},
+		{
+			"cod_clase":2
+		},
+		{
+			"cod_clase":3
 		}
+		
 	]
 )
 
