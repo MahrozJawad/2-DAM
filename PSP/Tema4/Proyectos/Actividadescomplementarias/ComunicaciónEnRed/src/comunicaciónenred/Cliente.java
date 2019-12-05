@@ -1,9 +1,9 @@
-package servidorchiste;
+package comunicaciónenred;
 
 import java.io.*;
 import java.net.*;
 
-public class KnockKnockClient {
+public class Cliente {
   public static void main(String[] args) throws IOException {
 
     Socket kkSocket = null;
@@ -21,21 +21,27 @@ public class KnockKnockClient {
       System.err.println("Couldn't get I/O for the connection to: manis.csi.ull.es.");
       System.exit(1);
     }
-    
+
     BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
     String fromServer;
     String fromUser;
+    int contador = 0;
+    while (contador < 2) {
+        while ((fromServer = in.readLine()) != null) {
+          System.out.println("Server: " + fromServer);
+          if (fromServer.equals("Bye."))
+            break;
 
-    while ((fromServer = in.readLine()) != null) {
-      System.out.println("Server: " + fromServer);
-      if (fromServer.equals("Bye."))
-        break;
-        
-      fromUser = stdIn.readLine();
-      if (fromUser != null) {
-        System.out.println("Client: " + fromUser);
-        out.println(fromUser);
-      }
+          fromUser = stdIn.readLine();
+          if (fromUser != null) {
+            System.out.println("Client: " + fromUser);
+            out.println(fromUser);
+          }
+        }
+        if(contador == 1) {
+            out.println("Bye.");
+        }
+        contador++;
     }
 
     out.close();

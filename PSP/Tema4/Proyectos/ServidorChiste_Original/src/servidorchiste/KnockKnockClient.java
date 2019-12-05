@@ -21,7 +21,7 @@ public class KnockKnockClient {
       System.err.println("Couldn't get I/O for the connection to: manis.csi.ull.es.");
       System.exit(1);
     }
-    
+
     BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
     String fromServer;
     String fromUser;
