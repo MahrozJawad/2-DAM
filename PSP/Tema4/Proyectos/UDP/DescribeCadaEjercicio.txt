@@ -1,0 +1,22 @@
+Ejercicio1:
+    Cuando se ejecuta el fichero de receive se pone a escucahar para la petición que le llega desde el sender. pués cuando ejecuto al sender le llega el mensaje al receiver.
+Ejercicio2:
+    hace lo mismo que el primer ejercicio, pero ahora utilizando un ordenador distinto.
+Ejercicio3:
+    Cuando ejecutamos el archivo de sender primero, se manda al servidor el mensaje pero ya que servidor no esta disponible, se termina con su trabajo y termina el programa. pero luego cuando he ejecutado el reciever pués el se queda otra vez esperando para la petición. Hasta que no le llega el mensaje no lo va a terminar el programa.
+Ejercicio4:
+    Cuando le pasamos la longitud de caracteres más de 10, el receptor solamente muestra los 10 primeros y no muestra los ultimos caracteres.
+Ejercicio5:
+    El resultado es un error porque se termina el proceso de espera y lanza el error.
+Ejercicio6:
+    Le llega el mensaje1, y despues cuando le mando el mensaje 2 también le llega. porque he puesto un bucle infinito y el receptor siempre esta en ejecución, y los senders le mandan la petición al receptor y el receptor le llega mensaje mandado a el infinitivamente.
+Ejercicio7:
+    he creado un arrayList que tiene dos puertos diferentes.y he creado un reciever2 para recibir con un puerto distinto.creamos un socket y con un bucle le ejecuto y mando el mensaje a los dos receptores. y no hay que cerrar el socket hasta que no termine con los dos receptores.
+Ejercicio8:
+    Cada vez que creamos el socket hay que cerrarlo para terminar el proceso con el primero, y luego ejecutaar el segundo. PorEjemplo en un bucle creamos un nuevo socket y al final le cerramos y en la segunda vuelta del bucle se creará otro bucle y se cerrará con el socket correpondinte.
+Ejercicio9:
+    En el receptor le pongo un bucle infinito para que escuche cualquier tiempo, y en el emisor también le pongo un bucle infinito para que se mande el mensaje siempre y para mandar cada tres segundos le he puesto Un Thread.Sleep(3000) para que se duerma 3 segundo y después cuando se levante se ejecuta el datagrama y lo manda al receptor.
+Ejercicio10:
+    he creado dos metodos estáticos que me ayudan a recibir en los dos aunque sea en sender o en el reciever. y mando mensaje a los dos y cuando llegue el mensaje se termina el programa. pero en el reciever he puesto un Thread.Sleep(3000) para que el sender se enciende y que se pone al puerto 12346 a escuchar, para recibir el mensaje que le envio desde reciever. primero el reciever se pone a la escucha para recibir el mensaje de sender cuando llega el mensaje de sender, el reciever se duerme para 3 segundos, mientras el reciever esta dormido, el sender se pone a la escucha al puerto 12346 y cuando reciever se despierta manda mensaje al sender a su puerto correspondiente. y se termina el programa cuando llegue el mensaje a sender. y reciever se termina el proceso igualmente.
+    
+    
