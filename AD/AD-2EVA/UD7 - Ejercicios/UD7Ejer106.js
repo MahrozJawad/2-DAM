@@ -19,7 +19,7 @@ db.clientes.insert(
 			"apellidos":"López",
 			"fecha de nacimiento": '19-03-1991',
 			"télefono": '632958743',
-			"clase":[1,2]
+			"clases":[1,3]
 		}
 	]
 );
@@ -28,14 +28,16 @@ db.monitores.insert(
 	[
 		{
 			"id_monitor": 1,
-			"nombre": "José"
-			"apellidos": "González"
+			"nombre": "José",
+			"apellidos": "González",
+            "clases_Impartido": [1,3]
 			
 		},
 		{
 			"id_monitor": 2,
 			"nombre":"Ramón",
-			"apellidos":"Fernández"
+			"apellidos":"Fernández",
+            "clases_Impartido":[2]
 		}
 	]
 );
@@ -43,13 +45,22 @@ db.monitores.insert(
 db.clases.insert(
 	[
 		{
-			"cod_clase":1
+			"cod_clase":1,
+            "nombre": "Pilates",
+            "horasSemanales": 3,
+            "Monitor":[1]
 		},
 		{
-			"cod_clase":2
+			"cod_clase":2,
+            "nombre": "Spinning",
+            "horasSemanales": 4,
+            "Monitor":[2]
 		},
 		{
-			"cod_clase":3
+			"cod_clase":3,
+            "nombre": "Yoga",
+            "horasSemanales": 2,
+            "Monitor":[1]
 		}
 		
 	]
