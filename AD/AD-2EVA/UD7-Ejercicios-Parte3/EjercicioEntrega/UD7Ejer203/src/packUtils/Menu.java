@@ -39,7 +39,7 @@ public class Menu {
                         MostrarCargahoraria();
                         break;  
                     case 3:
-                        MostrarAsignaturasDuracuionmedia();
+                        MostrarAsignaturasDuracuionMedia();
                         break;  
                         
                     // **************************
