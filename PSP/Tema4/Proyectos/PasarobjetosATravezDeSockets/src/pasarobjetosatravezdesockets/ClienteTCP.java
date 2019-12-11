@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
 public class ClienteTCP {
 
@@ -29,25 +30,18 @@ public class ClienteTCP {
         }
 
         BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
-        String fromServer;
-        String fromUser;
+        
+        ArrayList<Persona> personas = new ArrayList<>();
+        personas.add(new Persona("Mahroz", 21));
+        personas.add(new Persona("María", 22));
+        personas.add(new Persona("Paula", 23));
+        
+        
         
         ObjectOutputStream outObject = new ObjectOutputStream(miSocket.getOutputStream());
-        ObjectInputStream inObject = new ObjectInputStream(miSocket.getInputStream());
+        outObject.writeObject(personas);
         
-        while ((fromServer = in.readLine()) != null) {
-            System.out.println("Server: " + fromServer);
-            if (fromServer.equals("Bye.")) {
-                break;
-            }
-
-            fromUser = stdIn.readLine();
-            if (fromUser != null) {
-                System.out.println("Client: " + fromUser);
-                out.println(fromUser);
-            }
-        }
-
+        
         out.close();
         in.close();
         stdIn.close();

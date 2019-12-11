@@ -7,6 +7,10 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -15,22 +19,40 @@ public class MainActivity extends Activity {
     BDClientes clientes;
     SQLiteDatabase dbClientes;
     ArrayList<Cliente> listaCliente;
+    ListView listaView;
+    Button bMostrar;
+    Button binsertar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        listaView = findViewById(R.id.lista);
+        bMostrar = findViewById(R.id.buttonMostrar);
+        binsertar = findViewById(R.id.buttonInsertar);
 
         clientes = new BDClientes(getBaseContext(), "BDCLIENTES", null, 1);
         dbClientes = clientes.getWritableDatabase();
 
-        if(dbClientes != null) {
-//            for(int i = 0 ; i < 10; i++) {
-//                String sentencia = "INSERT INTO Clientes (dni, nombre, apellidos) VALUES('"+i+"', 'nombre "+i+"', 'apellido "+i+"');";
-//                dbClientes.execSQL(sentencia);
-//            }
+        SelectDatosCodigo(new String[]{"dni", "nombre", "apellidos"}, null,null, "apellidos");
 
-            SeleccionarDatosSelect();
+            binsertar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
+
+            bMostrar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    AdaptadorClientes adapter = new AdaptadorClientes(MainActivity.this,R.layout.list_layout,listaCliente);
+                    listaView.setAdapter(adapter);
+                }
+            });
+
+
 
 //              ContentValues valores = new ContentValues();
 //              valores.put("nombre", "Ana");
@@ -44,7 +66,7 @@ public class MainActivity extends Activity {
 //            dbClientes.update("clientes", valores, "dni=0",null);
 
             //dbClientes.close();
-        }
+
 
     }
 
@@ -60,5 +82,19 @@ public class MainActivity extends Activity {
         }
         return false;
     }
+
+    private boolean SelectDatosCodigo(String[] columna, String where, String[] valores, String orderBy) {
+        dbClientes = clientes.getReadableDatabase();
+        if(dbClientes!=null) {
+            Cursor cursor = dbClientes.query("Clientes", columna, where, valores,null,null,orderBy);
+            listaCliente = Cliente.getClientes(cursor);
+            dbClientes.close();
+            if(listaCliente == null) return false;
+            else return true;
+        }
+        return false;
+    }
+
+
 
 }

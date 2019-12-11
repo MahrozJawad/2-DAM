@@ -9,10 +9,11 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class ServidorTCP {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(4444);
@@ -35,19 +36,13 @@ public class ServidorTCP {
         BufferedReader in = new BufferedReader(
 				new InputStreamReader(
 				clientSocket.getInputStream()));
-        String inputLine, outputLine;
-        ObjectOutputStream outObject = new ObjectOutputStream(clientSocket.getOutputStream());
+        
         ObjectInputStream inObject = new ObjectInputStream(clientSocket.getInputStream());
-
-        outputLine = kkp.processInput(null);
-        out.println(outputLine);
-
-        while ((inputLine = in.readLine()) != null) {
-             outputLine = kkp.processInput(inputLine);
-             out.println(outputLine);
-             if (outputLine.equals("Bye."))
-                break;
-        }
+        ArrayList<Persona> personas = (ArrayList<Persona>) inObject.readObject();
+        
+         System.out.println(personas.toString());
+        
+        
         out.close();
         in.close();
         clientSocket.close();
