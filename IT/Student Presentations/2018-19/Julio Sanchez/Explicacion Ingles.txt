@@ -1,0 +1,67 @@
+Hi, I'm July, and today I'm going to explain a section of LIBGDX called HANDLING INPUT MULTIPLEXATING CONTROLLERS
+
+
+MULTIPLEXING
+Multiplexing is the generic term
+used to describe the operation of
+sending one or more analogue or
+digital signals over a common
+transmission line at different
+times or speeds.
+
+INPUTPROCESSOR
+An InputProcessor is used to receive input events from the
+keyboard and the touch screen (mouse on the desktop).
+
+INPUTMULTIPLEXER
+The InputMultiplexer will hand any new events to the first
+InputProcessor that was added to it. If that processor returns
+false from the method invoked to handle the event, this
+indicates the event was not handled and the multiplexer will
+hand the event to the next processor in the chain.
+
+BUT HOW DOES INPUTPROCESSOR WORK?
+You must create a class that implements InputProcessor, which will implement
+these methods that control the entries of different kinds.
+
+BUT HOW DOES INPUTMULTIPLEXER WORK?
+In the class that implements ApplicationListener, we will create
+the InputMultiplexer and add the InputProcessor that we
+want, as if it were a list. The InputMultiplexer will go through
+the InputProcessor until some event returns true, then it will
+stop its search.
+
+WHAT PURPOSE DOES IT HAVE?
+It can be used, for example, in first-person shooter games, to separate the use of the
+keyboard and the mouse in different InputProcessors. So to be able to handle the
+movement of the character, as well as move the camera of it.
+
+Abrir Raton para explicar
+
+
+you need to create a class that implements InputProcessor, this will be passed the GameScreen class to access its method that moves the Snake object.
+We will implement the overwrite methods, we will return false in all those we will use in the keyboard, for example, KeyDown.
+In the SCROLLED method, we will apply the changes. if a one is entered, we will scroll down,else is one negative, up. And we will use the updateDirection method of the GameScreen class for move the Snake.
+
+Abrir Teclado para explicar
+
+
+We will do the same on the keyboard, but using the KeyDown method
+
+Abrir GameScreen para explicar
+
+We will create an InputMultiplexer object that will be responsible for reading as many InputProcessor as we want to add it.
+
+We add a keyboard and a mouse, the keyboard will use it to move from left to right, and the mouse wheel to move from top to bottom.
+
+and we add the InputMultiplexer to the input of GDX.
+
+Ahora probamos el Juego.
+
+
+This is all thanks you!.
+
+
+
+
+
