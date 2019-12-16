@@ -34,6 +34,4 @@ public class Persona implements Serializable{
     public String toString() {
         return "Persona{" + "nombre=" + nombre + ", edad=" + edad + '}';
     }
-    
-    
 }
