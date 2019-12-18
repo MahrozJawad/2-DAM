@@ -1,2 +1,2 @@
 
-mongoimport -h localhost -d redSocial -c usuario --file mongo-redSocial.json
+mongoimport -h localhost -d redSocial -c usuarios --file mongo-redSocial.json
