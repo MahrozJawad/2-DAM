@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Informes", "Informe1\Informes.vbproj", "{BBB3046B-3EC2-4340-8B4F-E003E7F00BD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBB3046B-3EC2-4340-8B4F-E003E7F00BD0}.Debug|x86.ActiveCfg = Debug|x86
+		{BBB3046B-3EC2-4340-8B4F-E003E7F00BD0}.Debug|x86.Build.0 = Debug|x86
+		{BBB3046B-3EC2-4340-8B4F-E003E7F00BD0}.Release|x86.ActiveCfg = Release|x86
+		{BBB3046B-3EC2-4340-8B4F-E003E7F00BD0}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {076BCBC3-A483-414B-8219-CD18D96E5098}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿<Window x:Class="Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cr="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer"
+    Title="WPF Crystal Report Viewer" Height="600" Width="800" >
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <cr:CrystalReportsViewer Name="reportViewer1"/>
+                <cr:CrystalReportsViewer Name="reportViewer2"/>
+                <cr:CrystalReportsViewer Name="reportViewer3"/>
+                <cr:CrystalReportsViewer Name="reportViewer4"/>
+                <cr:CrystalReportsViewer Name="reportViewer5"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
