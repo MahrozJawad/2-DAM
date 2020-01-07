@@ -4,7 +4,7 @@ package packUtils;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import static packUtils.UtilString.*;
-import redsocial01consultas.*;
+import static redsocial01consultas.RedSocial01Consultas.*;
 
 public class Menu {
 
@@ -33,16 +33,16 @@ public class Menu {
                 Linea();
                 switch (opcion) {
                     case 1:
-                        RedSocial01Consultas.MujeresActivas();
+                        MujeresActivas();
                         break;  
                     case 2:
-                        System.out.println("Opción 2");
+                        HombresConMasMensajes();
                         break;  
                     case 3:
-                        System.out.println("Opción 3");
+                        UsuariosFutbolOCine();
                         break;  
                     case 4:
-                        System.out.println("Opción 4");
+                        UsuariosFutbolYCine();
                         break;  
                         
                     // **************************

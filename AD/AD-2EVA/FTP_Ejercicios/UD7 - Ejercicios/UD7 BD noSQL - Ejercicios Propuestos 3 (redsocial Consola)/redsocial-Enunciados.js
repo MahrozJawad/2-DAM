@@ -415,7 +415,7 @@ db.usuario.remove()
 
 */
 
-db.usuario.remove() 
+db.usuario.remove()
 
 /* 327. 
  Eliminar todos los hombres

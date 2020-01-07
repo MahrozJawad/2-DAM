@@ -1,0 +1,10 @@
+Para que sirve /^fútbol$/i
+
+De donde sacas "multi":true  
+
+por qué se utiliza un $ ("_id":"$sexo",)
+("_id":{
+				"pais":"$pais", "ciudad":"$ciudad", "sexo":"$sexo"
+			},)
+            
+          

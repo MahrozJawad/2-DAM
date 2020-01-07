@@ -1,0 +1,25 @@
+
+-> el tamaño del array de amigos.
+db.usuarios.find(
+    {
+        "amigos":{$size:2}
+    },
+    {
+        "nombre":1,
+        "apellidos":1,
+        "amigos":1
+    }
+).pretty()
+
+-> hay que poner multi para que se efecte a todos los registros...
+db.usuarios.update(
+    {
+        "sexo":"V"
+    },
+    {
+        $set:{"activo":false}
+    },
+    {
+        "multi":true
+    }
+)
