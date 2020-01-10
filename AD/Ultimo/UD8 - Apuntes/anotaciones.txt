@@ -1,0 +1,124 @@
+Open Data, o cómo los datos están cambiando el mundo
+por Manuel Zaforas
+
+    Madrid, España
+    24 de julio del 2017
+    Big Data
+
+Open Data, o datos abiertos, es un término que se viene oyendo mucho los últimos años, 
+pero ¿qué son realmente los datos abiertos? ¿qué aplicaciones tienen y quién está trabajando con ellos?
+
+Cuando hablamos de datos abiertos nos referimos a datos que estén disponibles de forma libre para todo el mundo, 
+pero realmente los datos deben de cumplir las siguientes características para que los consideremos abiertos:
+
+	Disponibilidad y acceso: los datos deben estar accesibles, preferiblemente a través de Internet. 
+	El acceso debe poder hacerse a través un protocolo estándar que no suponga un coste adicional y 
+	los datos deben volcarse en un formato ampliamente extendido y que faciliten su procesamiento.
+    Reutilización y redistribución: los datos deben ser distribuidos bajo unos términos que permitan 
+	su uso y explotación de forma libre y no pongan restricciones a cruzarlos con otros datos.
+    Participación universal: todos los interesados, sin excepción, deben poder acceder a los datos 
+	y usarlos de la manera que deseen, sin ningún tipo de restricción comercial o de propósito acotado.
+
+Existen otras corrientes o movimientos que fomentan una filosofía similar, como el Open Source o el Open Knowledge. 
+En última instancia lo que todas ellas pretenden es potenciar al máximo la innovación a través de la libertad y la colaboración.
+
+Aplicaciones de Open Data
+
+Open Data en las ciudades
+
+Sin duda, los datos abiertos son una de las claves en las ciudades inteligentes o smart cities. 
+Muchas ciudades españolas tienen ya servicios o plataformas de Open Data que son verdaderos aceleradores 
+de innovación y permiten focalizarse en los problemas de las grandes ciudades y analizar mejor las soluciones. 
+Los datos abiertos permiten conectar a todos los actores implicados en mejorar el día a día de los ciudadanos.
+
+Un buen ejemplo es la plataforma de datos abiertos de la EMT, la empresa municipal de transportes de la ciudad de Madrid, 
+que gestiona los servicios de autobuses urbanos o el servicio de bicicletas públicas y que ofrece de forma abierta 
+multitud de datos sobre su actividad en Open Data EMT Madrid.
+
+Open Data para la transparencia
+
+Una de las aplicaciones más claras de Open Data es en la transparencia de la actividad de los gobiernos. 
+La transparencia de los datos fiscal y presupuestos permite un debate público informado y basado en los datos, 
+no tanto en las percepciones.
+
+Los datos abiertos ayudan a que los ciudadanos entiendan mejor las acciones de los gobiernos a la vez que se hace 
+un seguimiento más exhaustivo de los mismas. Está claro que los datos abiertos son una importante arma en la lucha 
+contra la corrupción y unos dinamizadores de la sociedad civil.
+
+Podemos resaltar la plataforma Civio, que pretende mejorar el sistema democrático español gracias al uso de datos abiertos.
+
+Open Data en la agricultura
+
+La alimentación y la generación de una industria agraria sostenible son uno de los principales desafíos de este siglo. 
+Uno de los factores clave es la respuesta colectiva a través de la colaboración y la compartición de datos y buenas prácticas entre países. 
+Tanto pequeñas explotaciones agrarias como grandes productores están interesados en tener acceso a este tipo de información.
+
+En este contexto un actor relevante es la Global Open Data for Agriculture and Nutrition (GODAN), organización apoyada 
+por varios gobiernos y entidades como la FAO, que pretende apoyar los esfuerzos mundiales para tener disponibles datos 
+de carácter agrícola y nutricional para uso abierto en todo el mundo.
+Open Data en el medio ambiente
+
+El cambio climático y la protección del medio ambiente son una creciente preocupación de los gobiernos y 
+la sociedad en general.
+
+¿Cómo pueden los datos abiertos contribuir en esta lucha? Por un lado, la comunidad científica se puede ver
+ muy beneficiada por el acceso a datos que permitan profundizar y entender mejor los problemas y sus causas. 
+ Por otro lado, gracias a los datos se pueden tomar mejores decisiones sobre las acciones a tomar. 
+ Decisiones dirigidas por los datos, que tengan el mayor impacto y cuyos resultados podemos monitorizar de forma global.
+
+Un caso interesante es el de la plataforma Global Forest Watch, que ofrece datos sobre la evolución de las masas forestales en el tiempo.
+
+Open Data en la política
+
+Los datos abiertos pueden ser una pieza fundamental para revitalizar la democracia y hacerla más participativa. 
+En los procesos electorales el acceso a datos relativos a los candidatos, partidos, actividad parlamentaria, encuestas 
+y resultados en tiempo real o cercano al real nos ofrecen una visión más completa y rigurosa de la actividad de nuestros políticos.
+
+De la misma forma los partidos políticos pueden hacer uso de los datos abiertos y la analítica avanzada sobre ellos 
+para entender mejor a los ciudadanos y sus necesidades.
+
+Podemos resaltar la página OpenElections, que pretende revisar y certificar los resultados de las elecciones 
+en EE. UU. de los últimos años.
+
+Open Data en la ciencia
+
+No cabe duda de que el ámbito científico es en el que los datos abiertos pueden tener un mayor impacto. 
+Colaborar y compartir conocimiento están en la esencia de la ciencia y los datos abiertos nos ayudan a lograr este objetivo.
+
+Poder contrastar, validar,  verificar y refutar resultados es posible hoy más que nunca gracias al acceso a los datos 
+y esto, sin duda, es un acelerador de la investigación científica.
+
+Es especialmente reconocido el portal de datos abiertos de la NASA, donde se ofrecen miles de datasets y APIS 
+con información variopinta relativa a su actividad, como por ejemplo datos sobre los impactos de meteorito 
+que ha sufrido la Tierra o telemetría en tiempo real de la estación espacial internacional.
+
+De hecho, ya se habla de Open Science, donde gracias a nuevas tecnologías como Jupyter, es más fácil que nunca 
+compartir el conocimiento científico, desde los datos en crudo al análisis y las conclusiones.
+
+Open Data en el periodismo
+
+Por último, resaltar la importancia que los datos abiertos están teniendo en el mundo del periodismo, 
+una de las profesiones que más han cambiado con la llegada de Internet.
+
+La exposición de las actividades ilegales y la corrupción es mucho mayor gracias a los datos abiertos. 
+Algunas de las actividades de investigación periodística que más impacto han tenido en los últimos años 
+proceden del análisis de datos como las filtraciones de Snowden, la lista Falciani o los papeles de Panamá.
+
+De hecho está surgiendo una nueva disciplina conocida como “periodismo de datos”, centrada en extraer 
+información relevante del análisis de grandes volúmenes de información.
+
+En Madrid existe un grupo de trabajo abierto centrado en esta disciplina que se reúne periódicamente y 
+organizan charlas y jornadas sobre el tema.
+
+Conclusiones
+
+Las aplicaciones de los datos abiertos llegan a todos los sectores y casos de uso gracias a Internet y 
+las nuevas tecnologías como Cloud, Big Data, IoT… tenemos a nuestra disposición más datos que nunca, 
+en nuestra mano está saber sacarles partido.
+
+Los desafíos que tenemos por delante son seguir fomentando la publicación de datos abiertos en la 
+administración pública, simplificando los mecanismos de acceso y  convergiendo a estándares.
+
+La integración de diferentes fuentes de datos y la aplicación de tecnologías de Big Data e 
+Inteligencia Artificial nos ofrecerá en los próximos años resultados espectaculares.
+
