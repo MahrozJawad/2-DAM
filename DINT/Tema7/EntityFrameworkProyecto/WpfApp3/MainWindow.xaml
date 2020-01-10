@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="274.622" Width="594.713">
+
+    <Window.Resources>
+        <DataTemplate x:Key="listaTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=id}"></TextBlock>
+                <TextBlock Text=" - "></TextBlock>
+                <TextBlock Text="{Binding Path=nombre}"></TextBlock>
+            </StackPanel>
+
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="ListBox"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <ListBox x:Name="lista" ItemsSource="{Binding}" ItemTemplate="{StaticResource listaTemplate}"></ListBox>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Insertar"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <TextBlock Text="Identificador:"></TextBlock>
+                    <TextBox x:Name="IdentificadorInsertar" Margin="0,0,10,10"></TextBox>
+                    <TextBlock Text="Nombre:"></TextBlock>
+                    <TextBox x:Name="NombreInsertar" Margin="0,0,10,10"></TextBox>
+                    <TextBlock Text="Apellidos:"></TextBlock>
+                    <TextBox x:Name="ApellidosInsertar" Margin="0,0,10,10"></TextBox>
+                    <Button Content="Insertar" Click="Button_ClickInsertar" Width="60" HorizontalAlignment="Left"></Button>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
