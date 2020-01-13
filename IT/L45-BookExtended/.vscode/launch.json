@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DesktopLauncher",
+            "request": "launch",
+            "mainClass": "com.pmdm1920.game.desktop.DesktopLauncher",
+            "projectName": "desktop"
+        }
+    ]
+}
