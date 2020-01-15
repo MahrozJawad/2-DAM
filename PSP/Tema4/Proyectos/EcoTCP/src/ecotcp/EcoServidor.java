@@ -2,28 +2,32 @@ package ecotcp;
 
 import java.io.*;
 import java.net.*;
+import javax.net.ssl.SSLServerSocket;
+import javax.net.ssl.SSLServerSocketFactory;
+import javax.net.ssl.SSLSocket;
 
 public class EcoServidor {  
   public static final int PORT = 4444;
   public static void main(String[] args) throws IOException {
     // Establece el puerto en el que escucha peticiones
-    ServerSocket socketServidor = null;
+    SSLServerSocket serverSocket = null;
     try {
-      socketServidor = new ServerSocket(PORT);
+      SSLServerSocketFactory sslFactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
+            serverSocket = (SSLServerSocket) sslFactory.createServerSocket(4444);
     } catch (IOException e) {
       System.out.println("No puede escuchar en el puerto: " + PORT);
       System.exit(-1);
     }
 
-    Socket socketCliente = null;
+    SSLSocket socketCliente = null;
     BufferedReader entrada = null;
     PrintWriter salida = null;
 
-    System.out.println("Escuchando: " + socketServidor);
+    System.out.println("Escuchando: " + serverSocket);
     try {
       // Se bloquea hasta que recibe alguna petici�n de un cliente
       // abriendo un socket para el cliente
-      socketCliente = socketServidor.accept();
+      socketCliente =(SSLSocket) serverSocket.accept();
       System.out.println("Connexi�n acceptada: "+ socketCliente);
       // Establece canal de entrada
       entrada = new BufferedReader(new InputStreamReader(socketCliente.getInputStream()));
@@ -45,6 +49,6 @@ public class EcoServidor {
     salida.close();
     entrada.close();
     socketCliente.close();
-    socketServidor.close();
+    serverSocket.close();
   }
 }

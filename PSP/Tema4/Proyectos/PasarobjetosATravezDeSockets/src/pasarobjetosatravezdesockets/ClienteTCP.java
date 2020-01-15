@@ -9,16 +9,20 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import javax.net.SocketFactory;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
 
 public class ClienteTCP {
 
     public static void main(String[] args) throws IOException {
-        Socket miSocket = null;
+        SSLSocket miSocket = null;
         PrintWriter out = null;
         BufferedReader in = null;
 
         try {
-            miSocket = new Socket("localhost", 4444);
+            SocketFactory factory = SSLSocketFactory.getDefault();
+            miSocket = (SSLSocket) factory.createSocket("localhost",4444);
             out = new PrintWriter(miSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(miSocket.getInputStream()));
         } catch (UnknownHostException e) {

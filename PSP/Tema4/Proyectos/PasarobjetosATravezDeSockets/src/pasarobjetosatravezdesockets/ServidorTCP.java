@@ -10,22 +10,28 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import javax.net.SocketFactory;
+import javax.net.ssl.SSLServerSocket;
+import javax.net.ssl.SSLServerSocketFactory;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
 
 public class ServidorTCP {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        ServerSocket serverSocket = null;
+        SSLServerSocket serverSocket = null;
         try {
-            serverSocket = new ServerSocket(4444);
+            SSLServerSocketFactory sslFactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
+            serverSocket = (SSLServerSocket) sslFactory.createServerSocket(4444);
 	    System.out.println("estoy después de crear el socket");
         } catch (IOException e) {
             System.err.println("Could not listen on port: 4444.");
             System.exit(1);
         }
 
-        Socket clientSocket = null;
+        SSLSocket clientSocket = null;
         try {
-            clientSocket = serverSocket.accept();
+            clientSocket = (SSLSocket) serverSocket.accept();
 	    System.out.println("estoy después de aceptar un cliente");
         } catch (IOException e) {
             System.err.println("Accept failed.");

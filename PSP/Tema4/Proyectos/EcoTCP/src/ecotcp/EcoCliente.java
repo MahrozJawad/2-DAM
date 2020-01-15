@@ -2,10 +2,13 @@ package ecotcp;
 
 import java.net.*;
 import java.io.*;
+import javax.net.SocketFactory;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
 
 public class EcoCliente {
   public static void main(String[] args)  throws IOException {
-      Socket socketCliente = null;
+      SSLSocket socketCliente = null;
       BufferedReader entrada = null;
       PrintWriter salida = null;
 
@@ -13,7 +16,8 @@ public class EcoCliente {
       // servidor que est� en la misma m�quina que el cliente
       // y que escucha en el puerto 4444
       try {
-        socketCliente = new Socket("localhost", 4444);
+        SocketFactory factory = SSLSocketFactory.getDefault();
+            socketCliente = (SSLSocket) factory.createSocket("localhost",4444);
         // Obtenemos el canal de entrada
         entrada = new BufferedReader(new InputStreamReader(socketCliente.getInputStream()));
         // Obtenemos el canal de salida
