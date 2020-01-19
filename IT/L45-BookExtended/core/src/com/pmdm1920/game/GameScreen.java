@@ -93,7 +93,7 @@ public class GameScreen extends ScreenAdapter {
         update(delta);
         clearScreen();
         draw();
-//        drawDebug();
+      // drawDebug();
     }
 
     private void update(float delta) {

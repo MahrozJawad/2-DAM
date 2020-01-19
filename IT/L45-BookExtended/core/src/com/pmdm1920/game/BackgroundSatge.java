@@ -8,9 +8,7 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 
 public class BackgroundSatge extends Stage {
 
-    public BackgroundSatge(
-        float width, float height, 
-        TextureAtlas textureAtlas) {
+    public BackgroundSatge(float width, float height, TextureAtlas textureAtlas) {
         super();
         OrthographicCamera camera = new OrthographicCamera();
         camera.position.set(width / 2, height / 2, 0);
@@ -19,5 +17,6 @@ public class BackgroundSatge extends Stage {
         this.addActor(new BackgroundActor(textureAtlas.findRegion("mountains"), 20f));
         this.addActor(new BackgroundActor(textureAtlas.findRegion("valleys"), 15f));
         this.addActor(new BackgroundActor(textureAtlas.findRegion("trees"), 11f));
+        this.addActor(new BackgroundActor(textureAtlas.findRegion("nube"), 11f));
     }
 }
