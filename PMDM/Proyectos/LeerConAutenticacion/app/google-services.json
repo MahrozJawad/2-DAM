@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "812491526995",
+    "firebase_url": "https://leeconautenticacion-bfbfb.firebaseio.com",
+    "project_id": "leeconautenticacion-bfbfb",
+    "storage_bucket": "leeconautenticacion-bfbfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812491526995:android:9631abd1b944363e94c7a6",
+        "android_client_info": {
+          "package_name": "com.example.tema12.leerconautenticacion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812491526995-hmbrp1mqgisknn405kg2j8fsira9r4a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB99rn-9XIlqxcQBCI1Mg30BRBaFYS6MpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812491526995-hmbrp1mqgisknn405kg2j8fsira9r4a5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
