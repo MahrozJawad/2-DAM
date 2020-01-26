@@ -1,0 +1,21 @@
+.contenedor {
+    display:block;
+    width:500px;
+    margin:0 auto;
+    border: 1px solid orange;
+    background-color:   #f9f7ec  ;
+    padding: 15px;
+}
+.contenedor-form {
+    display:block;
+    margin:20px;
+}
+input[type=text] {
+    width:200px;
+    padding:5px 10px;
+}
+.rotulo {
+    font-size:30px;
+    font-weight: bold;
+    color:blue;
+}
