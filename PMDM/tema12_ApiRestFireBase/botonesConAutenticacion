@@ -1,0 +1,50 @@
+ /////Iniciar sesión con usuario y contraseña
+        btIniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signInWithEmailAndPassword(user.getText().toString(), pasword.getText().toString())
+                        .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                                if (!task.isSuccessful()) {
+                                    Toast.makeText(MainActivity.this, "Authentication failed:" + task.getException(), Toast.LENGTH_SHORT).show();
+                                }
+                                else iniciarAplicacion(task.getResult().getUser().getEmail().split("@")[0]);
+                            }
+                        });
+            }
+        });
+
+        //////// Iniciar sesión con anónimo
+        btAnonimus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signInAnonymously().addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (!task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this, "Authentication failed:" + task.getException(), Toast.LENGTH_SHORT).show();
+                        }
+                        else iniciarAplicacion((task.getResult().getUser()==null?"anonimous":task.getResult().getUser().getEmail().split("@")[0]));
+                    }
+                });}
+        });
+
+        ////// Crear usuario nueveo y iniciar sesión
+        btCrear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.createUserWithEmailAndPassword(user.getText().toString(), pasword.getText().toString())
+                        .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(MainActivity.this, "Usuario creado", Toast.LENGTH_SHORT).show();
+                                    iniciarAplicacion(task.getResult().getUser().getEmail().split("@")[0]);
+                                } else  Toast.makeText(MainActivity.this, "Problemas al crear usuario" + task.getException(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }});
+    }

@@ -7,14 +7,16 @@ import java.io.Serializable;
 
 public class Ciudad implements Serializable, Parcelable {
     private String Imagen;
-    private String nombre;
-    private String pais;
+    private String Nombre;
+    private String Pais;
 
+    public Ciudad() {
+    }
 
     public Ciudad(String imagen, String nombre, String pais) {
         Imagen = imagen;
-        this.nombre = nombre;
-        this.pais = pais;
+        this.Nombre = nombre;
+        this.Pais = pais;
     }
 
     public String getImagen() {
@@ -26,27 +28,27 @@ public class Ciudad implements Serializable, Parcelable {
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.Nombre = nombre;
     }
 
     public String getPais() {
-        return pais;
+        return Pais;
     }
 
     public void setPais(String pais) {
-        this.pais = pais;
+        this.Pais = pais;
     }
 
     @Override
     public String toString() {
         return "Ciudad{" +
                 "Imagen='" + Imagen + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", pais='" + pais + '\'' +
+                ", nombre='" + Nombre + '\'' +
+                ", pais='" + Pais + '\'' +
                 '}';
     }
 
@@ -58,14 +60,14 @@ public class Ciudad implements Serializable, Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.Imagen);
-        dest.writeString(this.nombre);
-        dest.writeString(this.pais);
+        dest.writeString(this.Nombre);
+        dest.writeString(this.Pais);
     }
 
     protected Ciudad(Parcel in) {
         this.Imagen = in.readString();
-        this.nombre = in.readString();
-        this.pais = in.readString();
+        this.Nombre = in.readString();
+        this.Pais = in.readString();
     }
 
     public static final Parcelable.Creator<Ciudad> CREATOR = new Parcelable.Creator<Ciudad>() {

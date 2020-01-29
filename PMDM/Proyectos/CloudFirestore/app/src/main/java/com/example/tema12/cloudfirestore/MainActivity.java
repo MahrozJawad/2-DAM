@@ -3,6 +3,7 @@ package com.example.tema12.cloudfirestore;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         login = findViewById(R.id.identificar);
         register = findViewById(R.id.registrar);
 
-        /*mAuthListener = new FirebaseAuth.AuthStateListener() {
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 } else
                     Toast.makeText(MainActivity.this,"User Null", Toast.LENGTH_SHORT).show();
             }
-        };*/
+        };
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,22 +84,29 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signInWithEmailAndPassword(user.getText().toString(), passwrod.toString())
-                        .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(!task.isSuccessful()) {
-                                    Toast.makeText(MainActivity.this, "Usuario no existe, pulse a rigistrar para registrar", Toast.LENGTH_SHORT).show();
-                                }
-                                else
-                                    Toast.makeText(MainActivity.this, "logged in", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                AbrirCiudades();
+//                mAuth.signInWithEmailAndPassword(user.getText().toString(), passwrod.toString())
+//                        .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<AuthResult> task) {
+//                                if(!task.isSuccessful()) {
+//                                    //Toast.makeText(MainActivity.this, "Usuario no existe, pulse a rigistrar para registrar", Toast.LENGTH_SHORT).show();
+//
+//                                }
+//                                else {
+//                                    AbrirCiudades();
+//                                }
+//                            }
+//                        });
             }
         });
 
     }
 
+    private void AbrirCiudades() {
+        Intent intent = new Intent(this, RecyclerActivity.class);
+        startActivity(intent);
+    }
 
 
 }

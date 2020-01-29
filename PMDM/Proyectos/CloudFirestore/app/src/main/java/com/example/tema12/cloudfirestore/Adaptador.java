@@ -6,17 +6,19 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-public class Adaptador extends FirebaseRecyclerAdapter<Ciudad,Holder> implements View.OnClickListener, View.OnLongClickListener{
+
+public class Adaptador extends FirestoreRecyclerAdapter<Ciudad,Holder> implements View.OnClickListener, View.OnLongClickListener{
 
     private View.OnClickListener clickListener;
     private View.OnLongClickListener longClickListener;
 
-    public Adaptador(@NonNull FirebaseRecyclerOptions<Ciudad> options) {
+    public Adaptador(@NonNull FirestoreRecyclerOptions<Ciudad> options) {
         super(options);
     }
+
 
     @Override
     protected void onBindViewHolder(@NonNull Holder holder, int i, @NonNull Ciudad ciudad) {
@@ -27,7 +29,7 @@ public class Adaptador extends FirebaseRecyclerAdapter<Ciudad,Holder> implements
     @Override
     public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.recycler_view_layout, parent, false);
+                .inflate(R.layout.cardview, parent, false);
         view.setOnLongClickListener(this);
         view.setOnClickListener(this);
         return new Holder(view);

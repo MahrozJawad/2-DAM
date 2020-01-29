@@ -1,12 +1,19 @@
 package com.example.tema12.cloudfirestore;
 
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 public class Holder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
@@ -23,7 +30,14 @@ public class Holder extends RecyclerView.ViewHolder implements View.OnClickListe
         txtView = v.findViewById(R.id.texto);
     }
     public void bind(Ciudad c) {
-        //imgView.setImageBitmap();
+
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference("/Alicante.jpg");
+        storageReference.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+            @Override
+            public void onComplete(@NonNull Task<Uri> task) {
+                Picasso.get().load(task.getResult()).into(imgView);
+            }
+        });
         txtView.setText(c.getNombre() + "/" + c.getPais());
     }
 

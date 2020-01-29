@@ -1,34 +1,40 @@
 package com.example.tema12.cloudfirestore;
 
-import android.app.DownloadManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
+
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class RecyclerActivity extends AppCompatActivity {
 
-    FirebaseRecyclerOptions<Ciudad> firebaseRecyclerOptions;
+    FirestoreRecyclerOptions<Ciudad> firestoreRecyclerOptions;
     Adaptador adaptador;
     RecyclerView recyclerView;
+    Query query;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_view_layout);
 
-        Query query = FirebaseDatabase.getInstance().getReference("/Addresses");
+        query = FirebaseFirestore.getInstance().collection("Ciudades");
 
-        recyclerView = findViewById(R.id.recycler);
-        firebaseRecyclerOptions = new FirebaseRecyclerOptions.Builder<Ciudad>()
+        firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Ciudad>()
                 .setQuery(query, Ciudad.class).build();
-        adaptador = new Adaptador(firebaseRecyclerOptions);
+        adaptador = new Adaptador(firestoreRecyclerOptions);
+
         adaptador.onClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +47,9 @@ public class RecyclerActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        adaptador.startListening();
+        recyclerView = findViewById(R.id.recycler);
         recyclerView.setAdapter(adaptador);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -54,6 +63,6 @@ public class RecyclerActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        adaptador.startListening();
     }
+
 }
