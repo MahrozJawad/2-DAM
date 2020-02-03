@@ -3,6 +3,7 @@ package com.example.tema12.cloudfirestore;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,12 +39,13 @@ public class RecyclerActivity extends AppCompatActivity {
         adaptador.onClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Toast.makeText(RecyclerActivity.this, "Click", Toast.LENGTH_SHORT).show();
             }
         });
         adaptador.onLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
+                Toast.makeText(RecyclerActivity.this, "Long Click", Toast.LENGTH_SHORT).show();
                 return false;
             }
         });

@@ -28,7 +28,18 @@ public class MathResource {
     public int sumar(@PathParam("operando1") int op1, @PathParam("operando2") int op2) {
         return op1+op2;
     }
-
+    @GET
+    @Path("/restar/{operando1}/{operando2}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public int restar(@PathParam("operando1") int op1, @PathParam("operando2") int op2) {
+        return op1-op2;
+    }
+    @GET
+    @Path("/multiplicar/{operando1}/{operando2}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public int multiplicar(@PathParam("operando1") int op1, @PathParam("operando2") int op2) {
+        return op1*op2;
+    }
 
 
 }

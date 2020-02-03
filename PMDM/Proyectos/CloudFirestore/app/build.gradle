@@ -38,6 +38,8 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-firestore:6.1.0'
     implementation 'com.firebaseui:firebase-ui-auth:4.1.0'
     implementation 'com.google.android.material:material:1.2.0-alpha04'
-    implementation 'com.google.firebase:firebase-storage:16.0.3'
+    implementation 'com.google.firebase:firebase-storage:17.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.firebase:firebase-auth:11.2.0' // ADDED
+    implementation 'com.google.android.gms:play-services-auth:11.2.0' // ADDED
 }

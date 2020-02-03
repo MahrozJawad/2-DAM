@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void AbrirCiudades() {
+        super.onBackPressed();
         Intent intent = new Intent(this, RecyclerActivity.class);
         startActivity(intent);
     }
