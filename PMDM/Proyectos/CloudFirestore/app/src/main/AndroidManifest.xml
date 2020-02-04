@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".RecyclerActivity">
         </activity>
+        <activity android:name=".EditarCiudad">
+        </activity>
     </application>
 
 </manifest>

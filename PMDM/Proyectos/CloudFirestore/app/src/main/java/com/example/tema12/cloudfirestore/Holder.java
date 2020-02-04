@@ -24,24 +24,20 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Holder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
+public class Holder extends RecyclerView.ViewHolder {
 
     private ImageView imgView;
     private TextView txtView;
-    private View.OnLongClickListener longListener;
-    private View.OnClickListener clickListener;
 
     public Holder(@NonNull View v) {
         super(v);
-        v.setOnClickListener(this);
-        v.setOnLongClickListener(this);
         imgView = v.findViewById(R.id.imagen);
         txtView = v.findViewById(R.id.texto);
     }
     public void bind(Ciudad c) {
         txtView.setText(c.getNombre() + "/" + c.getPais());
 
-        StorageReference ref = FirebaseStorage.getInstance().getReference(c.getImagen() + ".jpg");
+        StorageReference ref = FirebaseStorage.getInstance().getReference(c.getImagen());
 
         ref.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
             @Override
@@ -49,26 +45,5 @@ public class Holder extends RecyclerView.ViewHolder implements View.OnClickListe
                 Picasso.get().load(task.getResult()).into(imgView);
             }
         });
-    }
-
-    @Override
-    public void onClick(View v) {
-        if(clickListener != null) {
-            clickListener.onClick(v);
-        }
-    }
-    public void OnClickListener(View.OnClickListener listener) {
-        this.clickListener = listener;
-    }
-
-    @Override
-    public boolean onLongClick(View v) {
-        if(longListener != null) {
-            longListener.onLongClick(v);
-        }
-        return true;
-    }
-    public void OnLongClickListener(View.OnLongClickListener listener) {
-        this.longListener = listener;
     }
 }
