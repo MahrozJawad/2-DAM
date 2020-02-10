@@ -1,0 +1,4 @@
+#Sun Jan 19 16:27:58 CET 2020
+base.0=C\:\\Users\\Mahroz\\Desktop\\AgendaMenus\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
+path.0=classes.dex
+renamed.0=classes.dex

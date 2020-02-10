@@ -1,0 +1,193 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:1-31:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\b8326cf6c5e8e0086b3a92c0fd2e2a55\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\f2b3aa61255e283ce1e1e5ef0a2ebbdf\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\98aa132e2af110f9a01aa26bb398d5bf\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\d495df0b69da8462dd988737df0da49b\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\521104692e040ba3ac2f9019615f2cdb\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\e447d3c17d56ecd16be9549c1219dbee\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\f559ceed70ec499b66b4f64f5a6fd34e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\aa3c59e79910c8f79ce0e70c69f88b56\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\123fd3f5c1a0dc8a3d5028a022d26606\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\66d39ee3d7956688c776a7c3a6736ac1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\b88fdf31c533895865733b17ad549cab\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\a4acbbcf9e792efcfe8631480fdc5387\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\1b285eddefd2d1abfb5b9efb3c98cabe\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\17fe90bd9e556278508c1a59b9f2df47\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4cf034cfc7d7e16d05dbeb2778934ab6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\77484821de298fe13238010d91327e22\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\004e18c3e7d78fe96373a877696712d5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\75d9621d28d79ab04865b37c678b93d6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\765ff863442e85d7a5b1dbd7cb2794e7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\461a4735cfa9c4a81920a0cb63d21036\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4994f4f2e9a69519349f89986aa1e20a\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\dc52223e42c76df87a0507b0c6b46b7a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4063d0d809d8e6aa1d8e9282f571a0c6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\074c2ec85840f6b7b8b626297854a089\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\3483a8f30bf56dee27d9034be2087388\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4aea68aaa18f809464c9386c5157c9a3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\40693a906ada43297410f1e51af9c424\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\ea91f726946a5f946e599014b6047352\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\d36d2f8a498716ebe4a8e48abe0b8e6e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\79c9c3451335d088bd801509709f8dcb\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\d0d2aecc4972da86ccf01f1c9d1d99d0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\fd71cc7ebe65a775030fbc86129e4361\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\1a592b09a6281f95b49168a111bb5af6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\0dc255db4eacc6097193da096f3c25f3\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:1-31:12
+	package
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:1-31:12
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:1-31:12
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:5:22-77
+application
+ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:7:5-29:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\b8326cf6c5e8e0086b3a92c0fd2e2a55\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\b8326cf6c5e8e0086b3a92c0fd2e2a55\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\98aa132e2af110f9a01aa26bb398d5bf\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\98aa132e2af110f9a01aa26bb398d5bf\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4994f4f2e9a69519349f89986aa1e20a\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4994f4f2e9a69519349f89986aa1e20a\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\074c2ec85840f6b7b8b626297854a089\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\074c2ec85840f6b7b8b626297854a089\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4994f4f2e9a69519349f89986aa1e20a\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:11:9-56
+	android:icon
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:13:9-40
+activity#com.example.agenda.MainActivity
+ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:14:9-23:20
+	android:label
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:16:13-45
+	android:theme
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:17:13-56
+	android:name
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:15:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:21:27-74
+activity#com.example.agenda.EditarContacto
+ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:24:9-28:20
+	android:label
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:26:13-44
+	android:theme
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:27:13-56
+	android:name
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml:25:13-43
+uses-sdk
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\b8326cf6c5e8e0086b3a92c0fd2e2a55\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\b8326cf6c5e8e0086b3a92c0fd2e2a55\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\f2b3aa61255e283ce1e1e5ef0a2ebbdf\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\f2b3aa61255e283ce1e1e5ef0a2ebbdf\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\98aa132e2af110f9a01aa26bb398d5bf\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\98aa132e2af110f9a01aa26bb398d5bf\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\d495df0b69da8462dd988737df0da49b\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\d495df0b69da8462dd988737df0da49b\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\521104692e040ba3ac2f9019615f2cdb\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\521104692e040ba3ac2f9019615f2cdb\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\e447d3c17d56ecd16be9549c1219dbee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\e447d3c17d56ecd16be9549c1219dbee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\f559ceed70ec499b66b4f64f5a6fd34e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\f559ceed70ec499b66b4f64f5a6fd34e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\aa3c59e79910c8f79ce0e70c69f88b56\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\aa3c59e79910c8f79ce0e70c69f88b56\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\123fd3f5c1a0dc8a3d5028a022d26606\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\123fd3f5c1a0dc8a3d5028a022d26606\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\66d39ee3d7956688c776a7c3a6736ac1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\66d39ee3d7956688c776a7c3a6736ac1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\b88fdf31c533895865733b17ad549cab\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\b88fdf31c533895865733b17ad549cab\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\a4acbbcf9e792efcfe8631480fdc5387\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\a4acbbcf9e792efcfe8631480fdc5387\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\1b285eddefd2d1abfb5b9efb3c98cabe\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\1b285eddefd2d1abfb5b9efb3c98cabe\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\17fe90bd9e556278508c1a59b9f2df47\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\17fe90bd9e556278508c1a59b9f2df47\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4cf034cfc7d7e16d05dbeb2778934ab6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4cf034cfc7d7e16d05dbeb2778934ab6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\77484821de298fe13238010d91327e22\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\77484821de298fe13238010d91327e22\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\004e18c3e7d78fe96373a877696712d5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\004e18c3e7d78fe96373a877696712d5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\75d9621d28d79ab04865b37c678b93d6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\75d9621d28d79ab04865b37c678b93d6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\765ff863442e85d7a5b1dbd7cb2794e7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\765ff863442e85d7a5b1dbd7cb2794e7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\461a4735cfa9c4a81920a0cb63d21036\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\461a4735cfa9c4a81920a0cb63d21036\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4994f4f2e9a69519349f89986aa1e20a\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4994f4f2e9a69519349f89986aa1e20a\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\dc52223e42c76df87a0507b0c6b46b7a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\dc52223e42c76df87a0507b0c6b46b7a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4063d0d809d8e6aa1d8e9282f571a0c6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4063d0d809d8e6aa1d8e9282f571a0c6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\074c2ec85840f6b7b8b626297854a089\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\074c2ec85840f6b7b8b626297854a089\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\3483a8f30bf56dee27d9034be2087388\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\3483a8f30bf56dee27d9034be2087388\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4aea68aaa18f809464c9386c5157c9a3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\4aea68aaa18f809464c9386c5157c9a3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\40693a906ada43297410f1e51af9c424\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\40693a906ada43297410f1e51af9c424\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\ea91f726946a5f946e599014b6047352\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\ea91f726946a5f946e599014b6047352\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\d36d2f8a498716ebe4a8e48abe0b8e6e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\d36d2f8a498716ebe4a8e48abe0b8e6e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\79c9c3451335d088bd801509709f8dcb\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\79c9c3451335d088bd801509709f8dcb\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\d0d2aecc4972da86ccf01f1c9d1d99d0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\d0d2aecc4972da86ccf01f1c9d1d99d0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\fd71cc7ebe65a775030fbc86129e4361\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\fd71cc7ebe65a775030fbc86129e4361\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\1a592b09a6281f95b49168a111bb5af6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\1a592b09a6281f95b49168a111bb5af6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\0dc255db4eacc6097193da096f3c25f3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Mahroz\.gradle\caches\transforms-2\files-2.1\0dc255db4eacc6097193da096f3c25f3\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mahroz\Desktop\AgendaMenus\app\src\main\AndroidManifest.xml
