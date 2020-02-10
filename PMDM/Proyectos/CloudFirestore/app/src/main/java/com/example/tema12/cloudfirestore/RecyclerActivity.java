@@ -3,6 +3,7 @@ package com.example.tema12.cloudfirestore;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,8 +22,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 public class RecyclerActivity extends AppCompatActivity {
 
     FirestoreRecyclerOptions<Ciudad> firestoreRecyclerOptions;
-    Adaptador adaptador;
-    RecyclerView recyclerView;
+    public Adaptador adaptador;
+    public RecyclerView recyclerView;
     Query query;
 
     @Override
@@ -39,7 +40,10 @@ public class RecyclerActivity extends AppCompatActivity {
         adaptador.onClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(RecyclerActivity.this, "Click", Toast.LENGTH_SHORT).show();
+                adaptador.getSnapshots().getSnapshot(recyclerView.getChildAdapterPosition(v)).getId();
+                Intent i = new Intent(RecyclerActivity.this, EditarCiudad.class);
+
+                startActivity(i);
             }
         });
         adaptador.onLongClickListener(new View.OnLongClickListener() {
