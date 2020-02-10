@@ -16,6 +16,7 @@ import packUtils.Menu;
 
 public class ApiRestMain {
 
+    private static Response response1 = null;
     public static void main(String[] args) {
         Menu.Mostrar();
     }
@@ -27,21 +28,21 @@ public class ApiRestMain {
         System.out.print("Escriba el ID del registro: ");
         int registro = Integer.valueOf(teclado.nextLine());
 
-        // Response response1 = client
-        //        .target()
-        //        .path()
-		//        .queryParam()
-        //        .request()
-		//        .header()
-		//        .accept()
-        //        .XXXXX();
+         response1 = client
+                .target("http://localhost/")
+                .path("/phpRest/fiestas?")
+                .queryParam("id", registro)
+                .request()
+		        .header("Content-Type", "application/json")
+		        .accept(MediaType.APPLICATION_JSON)
+                .get();
 		
 		
         System.out.println("status:" + response1.getStatus());
 
         if (response1.getStatus() == 200) {
             String body = response1.readEntity(String.class);
-            //System.out.println("Response: " + body);
+            System.out.println("Response: " + body);
 
             JsonReader jsonReader = Json.createReader(new StringReader(body));
             JsonArray jsonArray = jsonReader.readArray();
@@ -200,7 +201,7 @@ public class ApiRestMain {
 			//        .XXXXX();
 
 			System.out.println("status:" + response1.getStatus());
-			String body = response1.readEntity(String.class);
+			//String body = response1.readEntity(String.class);
 			System.out.println("Response: " + body);
 
 			if (response1.getStatus() == 201) {
